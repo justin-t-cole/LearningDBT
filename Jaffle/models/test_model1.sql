@@ -1,18 +1,16 @@
-With sample_buildings as (
-    SELECT 
-        bldg_id,
-        city,
-        state
-    FROM "defaultdb"."buildings" 
-    group by 1
-)
-/*where county='G5500690' */
+/*
+SELECT * FROM "defaultdb"."resby_puma_northeast" puma
+inner join "defaultdb"."buildings" buildings
+on puma.bldg_id=buildings.bldg_fid
 
-Select 
-    sum(out.electricity.clothes_dryer.energy_consumption),
-    bldg_id
-from "defaultdb"."resby_puma_northeast"
+limit 10;
+*/
 
+/* select * from {{ ref('Region_Table') }} */
 
-left join sample_buildings  using (bldg_id)
+/* In plain english: select all from the "buildings" table where the state value is in the Region_Table state column.  */
 
+SELECT * FROM "defaultdb"."buildings" buildings
+left join {{ ref('Region_Table2') }} region
+on buildings.state=region.state1
+limit 10;
