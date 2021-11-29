@@ -1,0 +1,13 @@
+
+    
+    create external table dbt.Random_Small_Towns (Zip integer, City1 string, County string, State1 string, Region string)
+    stored as parquet
+    location 's3://justin-dbt-testing/Targettables/3eb3cfba-cf6b-4136-bcec-fb0ddce53c96/'
+    tblproperties ('classification'='parquet')
+  ;
+    -- dbt seed --
+    
+          insert into dbt.Random_Small_Towns (Zip, City1, County, State1, Region) values
+          (%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s),(%s,%s,%s,%s,%s)
+      
+  

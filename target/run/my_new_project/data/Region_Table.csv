@@ -1,0 +1,13 @@
+
+    
+    create external table dbt.Region_Table (State1 string, Region string)
+    stored as parquet
+    location 's3://justin-dbt-testing/Targettables/f5d46640-edf3-4a3f-bcf5-f3ff83a65335/'
+    tblproperties ('classification'='parquet')
+  ;
+    -- dbt seed --
+    
+          insert into dbt.Region_Table (State1, Region) values
+          (%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s),(%s,%s)
+      
+  
