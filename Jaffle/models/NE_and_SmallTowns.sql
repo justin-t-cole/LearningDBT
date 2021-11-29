@@ -1,0 +1,1 @@
+/* select * {{ ref('New_England') }} union select * {{ ref('Small_Towns') }} */
