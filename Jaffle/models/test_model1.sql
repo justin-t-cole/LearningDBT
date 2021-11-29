@@ -11,6 +11,6 @@ limit 10;
 /* In plain english: select all from the "buildings" table where the state value is in the Region_Table state column.  */
 
 SELECT * FROM "defaultdb"."buildings" buildings
-left join {{ ref('Region_Table2') }} region
+inner join {{ ref('Region_Table2') }} region
 on buildings.state=region.state1
 limit 10;
