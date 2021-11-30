@@ -1,0 +1,44 @@
+version: 2
+
+models:
+  - name: New_England
+    columns:
+      - name: gid
+        tests:
+          - unique
+          - not_null
+      - name: bldg_fid
+        tests:
+          - unique
+          - not_null
+      - name: state
+        tests:
+          - accepted_values:
+              values: ['ME', 'NH','CT', 'MA', 'RI'] #For example purposes VT is left out
+      - name: state
+        tests:
+          - not_null
+          - relationships:
+              to: ref('region_table')
+              field: state1
+
+  - name: Small_Towns
+    columns:
+      - name: gid
+        tests:
+          - unique
+          - not_null
+      - name: bldg_fid
+        tests:
+          - unique
+          - not_null
+      - name: city1
+        tests:
+          - accepted_values:
+              values: ['Portland', 'Lebanon','Millinocket', 'Center Hill', 'Muce', 'Key West', 'Menomonie', 'El Paso', 'Lakeland', 'Bagdad'] 
+      - name: city
+        tests:
+          - not_null
+          - relationships:
+              to: ref('random_small_towns')
+              field: city1

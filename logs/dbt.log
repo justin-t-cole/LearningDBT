@@ -22113,3 +22113,981 @@ There are 1 unused configuration paths:
 2021-11-29 23:12:49.149997 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff929c2340>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff929c2190>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff929c2fd0>]}
 2021-11-29 23:12:49.150776 (MainThread): Flushing usage events
 2021-11-29 23:12:49.497398 (MainThread): Connection 'model.my_new_project.Small_Towns' was properly closed.
+2021-11-30 14:08:05.208411 (MainThread): Running with dbt=0.21.0
+2021-11-30 14:08:05.293111 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.test.TestTask'>, data=False, debug=False, defer=None, exclude=None, fail_fast=False, greedy=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/vscode/.dbt', project_dir=None, record_timing_info=None, rpc_method='test', schema=False, select=None, selector_name=None, single_threaded=False, state=None, store_failures=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='test', write_json=True)
+2021-11-30 14:08:05.300568 (MainThread): Tracking: tracking
+2021-11-30 14:08:05.303919 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7fc2b910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81538070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81538ee0>]}
+2021-11-30 14:08:05.314482 (MainThread): Partial parsing not enabled
+2021-11-30 14:08:05.326336 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81538070>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7f719f40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff7f719e50>]}
+2021-11-30 14:08:05.327243 (MainThread): Flushing usage events
+2021-11-30 14:08:05.646673 (MainThread): Encountered an error:
+2021-11-30 14:08:05.648510 (MainThread): Compilation Error
+  Error reading my_new_project: schema.yml - Runtime Error
+    Syntax error near line 10
+    ------------------------------
+    7  |         tests:
+    8  |           - unique
+    9  |           - not_null
+    10 |        - name: bldg_fid
+    11 |         tests:
+    12 |           - unique
+    13 |           - not_null
+    
+    Raw Error:
+    ------------------------------
+    while parsing a block collection
+      in "<unicode string>", line 6, column 7
+    did not find expected '-' indicator
+      in "<unicode string>", line 10, column 8
+2021-11-30 14:08:05.668366 (MainThread): Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/yaml_helper.py", line 65, in load_yaml_text
+    return safe_load(contents)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/yaml_helper.py", line 60, in safe_load
+    return yaml.load(contents, Loader=SafeLoader)
+  File "/usr/local/lib/python3.8/site-packages/yaml/__init__.py", line 81, in load
+    return loader.get_single_data()
+  File "/usr/local/lib/python3.8/site-packages/yaml/constructor.py", line 49, in get_single_data
+    node = self.get_single_node()
+  File "yaml/_yaml.pyx", line 673, in yaml._yaml.CParser.get_single_node
+  File "yaml/_yaml.pyx", line 687, in yaml._yaml.CParser._compose_document
+  File "yaml/_yaml.pyx", line 731, in yaml._yaml.CParser._compose_node
+  File "yaml/_yaml.pyx", line 845, in yaml._yaml.CParser._compose_mapping_node
+  File "yaml/_yaml.pyx", line 729, in yaml._yaml.CParser._compose_node
+  File "yaml/_yaml.pyx", line 806, in yaml._yaml.CParser._compose_sequence_node
+  File "yaml/_yaml.pyx", line 731, in yaml._yaml.CParser._compose_node
+  File "yaml/_yaml.pyx", line 845, in yaml._yaml.CParser._compose_mapping_node
+  File "yaml/_yaml.pyx", line 729, in yaml._yaml.CParser._compose_node
+  File "yaml/_yaml.pyx", line 808, in yaml._yaml.CParser._compose_sequence_node
+  File "yaml/_yaml.pyx", line 860, in yaml._yaml.CParser._parse_next_event
+yaml.parser.ParserError: while parsing a block collection
+  in "<unicode string>", line 6, column 7
+did not find expected '-' indicator
+  in "<unicode string>", line 10, column 8
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/parser/schemas.py", line 108, in yaml_from_file
+    return load_yaml_text(source_file.contents)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/yaml_helper.py", line 72, in load_yaml_text
+    raise dbt.exceptions.ValidationException(error)
+dbt.exceptions.ValidationException: Runtime Error
+  Syntax error near line 10
+  ------------------------------
+  7  |         tests:
+  8  |           - unique
+  9  |           - not_null
+  10 |        - name: bldg_fid
+  11 |         tests:
+  12 |           - unique
+  13 |           - not_null
+  
+  Raw Error:
+  ------------------------------
+  while parsing a block collection
+    in "<unicode string>", line 6, column 7
+  did not find expected '-' indicator
+    in "<unicode string>", line 10, column 8
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/main.py", line 127, in main
+    results, succeeded = handle_and_check(args)
+  File "/usr/local/lib/python3.8/site-packages/dbt/main.py", line 205, in handle_and_check
+    task, res = run_from_args(parsed)
+  File "/usr/local/lib/python3.8/site-packages/dbt/main.py", line 258, in run_from_args
+    results = task.run()
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/runnable.py", line 433, in run
+    self._runtime_initialize()
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/runnable.py", line 149, in _runtime_initialize
+    super()._runtime_initialize()
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/runnable.py", line 87, in _runtime_initialize
+    self.load_manifest()
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/runnable.py", line 74, in load_manifest
+    self.manifest = ManifestLoader.get_full_manifest(self.config)
+  File "/usr/local/lib/python3.8/site-packages/dbt/parser/manifest.py", line 182, in get_full_manifest
+    manifest = loader.load()
+  File "/usr/local/lib/python3.8/site-packages/dbt/parser/manifest.py", line 210, in load
+    read_files(project, self.manifest.files, project_parser_files, saved_files)
+  File "/usr/local/lib/python3.8/site-packages/dbt/parser/read_files.py", line 151, in read_files
+    project_files['SchemaParser'] = read_files_for_parser(
+  File "/usr/local/lib/python3.8/site-packages/dbt/parser/read_files.py", line 106, in read_files_for_parser
+    source_files = get_source_files(
+  File "/usr/local/lib/python3.8/site-packages/dbt/parser/read_files.py", line 97, in get_source_files
+    file = load_source_file(fp, parse_file_type, project.project_name, saved_files)
+  File "/usr/local/lib/python3.8/site-packages/dbt/parser/read_files.py", line 37, in load_source_file
+    dfy = yaml_from_file(source_file)
+  File "/usr/local/lib/python3.8/site-packages/dbt/parser/schemas.py", line 111, in yaml_from_file
+    raise CompilationException(
+dbt.exceptions.CompilationException: Compilation Error
+  Error reading my_new_project: schema.yml - Runtime Error
+    Syntax error near line 10
+    ------------------------------
+    7  |         tests:
+    8  |           - unique
+    9  |           - not_null
+    10 |        - name: bldg_fid
+    11 |         tests:
+    12 |           - unique
+    13 |           - not_null
+    
+    Raw Error:
+    ------------------------------
+    while parsing a block collection
+      in "<unicode string>", line 6, column 7
+    did not find expected '-' indicator
+      in "<unicode string>", line 10, column 8
+
+2021-11-30 14:11:38.858633 (MainThread): Running with dbt=0.21.0
+2021-11-30 14:11:38.944671 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.test.TestTask'>, data=False, debug=False, defer=None, exclude=None, fail_fast=False, greedy=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/vscode/.dbt', project_dir=None, record_timing_info=None, rpc_method='test', schema=False, select=None, selector_name=None, single_threaded=False, state=None, store_failures=False, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='test', write_json=True)
+2021-11-30 14:11:38.951074 (MainThread): Tracking: tracking
+2021-11-30 14:11:38.959913 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffac16f5e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffada0ccd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffada0cdf0>]}
+2021-11-30 14:11:38.971178 (MainThread): Partial parsing not enabled
+2021-11-30 14:11:38.987873 (MainThread): Parsing macros/catalog.sql
+2021-11-30 14:11:38.991246 (MainThread): Parsing macros/adapters.sql
+2021-11-30 14:11:39.000091 (MainThread): Parsing macros/materializations/seed.sql
+2021-11-30 14:11:39.003333 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-11-30 14:11:39.004555 (MainThread): Parsing macros/materializations/table.sql
+2021-11-30 14:11:39.007570 (MainThread): Parsing macros/materializations/incremental.sql
+2021-11-30 14:11:39.026189 (MainThread): Parsing macros/materializations/view.sql
+2021-11-30 14:11:39.029638 (MainThread): Parsing macros/core.sql
+2021-11-30 14:11:39.033432 (MainThread): Parsing macros/materializations/test.sql
+2021-11-30 14:11:39.038483 (MainThread): Parsing macros/materializations/helpers.sql
+2021-11-30 14:11:39.045752 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-11-30 14:11:39.049903 (MainThread): Parsing macros/materializations/view/view.sql
+2021-11-30 14:11:39.054275 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-11-30 14:11:39.056254 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-11-30 14:11:39.063817 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-11-30 14:11:39.075007 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-11-30 14:11:39.087739 (MainThread): Parsing macros/materializations/table/table.sql
+2021-11-30 14:11:39.092281 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-11-30 14:11:39.100295 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-11-30 14:11:39.119633 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-11-30 14:11:39.130289 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-11-30 14:11:39.132745 (MainThread): Parsing macros/etc/query.sql
+2021-11-30 14:11:39.136279 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-11-30 14:11:39.139916 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-11-30 14:11:39.142044 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-11-30 14:11:39.143425 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-11-30 14:11:39.145594 (MainThread): Parsing macros/etc/datetime.sql
+2021-11-30 14:11:39.151791 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-11-30 14:11:39.153330 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-11-30 14:11:39.156252 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-11-30 14:11:39.157955 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-11-30 14:11:39.160088 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-11-30 14:11:39.162496 (MainThread): Parsing macros/adapters/common.sql
+2021-11-30 14:11:39.270854 (MainThread): Acquiring new athena connection "model.my_new_project.NE_and_SmallTowns".
+2021-11-30 14:11:39.279272 (MainThread): Acquiring new athena connection "model.my_new_project.New_England".
+2021-11-30 14:11:39.282240 (MainThread): Acquiring new athena connection "model.my_new_project.Small_Towns".
+2021-11-30 14:11:39.308699 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.312466 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.315768 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.318742 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.325412 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.327369 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.335073 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.336884 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.339003 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.340684 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.343287 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.349234 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.352711 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.355595 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.358835 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-11-30 14:11:39.360491 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_New_England_state__state1__ref_region_table_.0525103524' (models/schema.yml) depends on a node named 'region_table' which was not found
+2021-11-30 14:11:39.361377 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_Small_Towns_city__city1__ref_random_small_towns_.cb2440f8d3' (models/schema.yml) depends on a node named 'random_small_towns' which was not found
+2021-11-30 14:11:39.375175 (MainThread): [WARNING]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 1 unused configuration paths:
+- models.my_new_project.example
+
+2021-11-30 14:11:39.380146 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'e4e0eb1d-21b3-41da-8d75-4277aa1a4405', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabbe2670>]}
+2021-11-30 14:11:39.399240 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-11-30 14:11:39.402993 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'e4e0eb1d-21b3-41da-8d75-4277aa1a4405', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabbe2d60>]}
+2021-11-30 14:11:39.403969 (MainThread): Found 3 models, 12 tests, 0 snapshots, 0 analyses, 162 macros, 0 operations, 2 seed files, 0 sources, 0 exposures
+2021-11-30 14:11:39.407369 (MainThread): 
+2021-11-30 14:11:39.408311 (MainThread): Acquiring new athena connection "master".
+2021-11-30 14:11:39.411180 (ThreadPoolExecutor-1_0): Acquiring new athena connection "list_awsdatacatalog_dbt".
+2021-11-30 14:11:39.418062 (ThreadPoolExecutor-1_0): Using athena connection "list_awsdatacatalog_dbt".
+2021-11-30 14:11:39.419240 (ThreadPoolExecutor-1_0): On list_awsdatacatalog_dbt: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+  
+2021-11-30 14:11:39.421848 (ThreadPoolExecutor-1_0): Opening a new connection, currently in state init
+2021-11-30 14:11:39.447732 (ThreadPoolExecutor-1_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+2021-11-30 14:11:42.467368 (ThreadPoolExecutor-1_0): SQL status: OK -1 in 3.05 seconds
+2021-11-30 14:11:42.478333 (ThreadPoolExecutor-1_0): On list_awsdatacatalog_dbt: Close
+2021-11-30 14:11:42.485074 (MainThread): 14:11:42 | Concurrency: 1 threads (target='dev')
+2021-11-30 14:11:42.488449 (MainThread): 14:11:42 | 
+2021-11-30 14:11:42.499592 (Thread-1): Began running node test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb
+2021-11-30 14:11:42.501312 (Thread-1): 14:11:42 | 1 of 12 START test accepted_values_New_England_state__ME__NH__CT__MA__RI [RUN]
+2021-11-30 14:11:42.506753 (Thread-1): Acquiring new athena connection "test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb".
+2021-11-30 14:11:42.510598 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46142), raddr=('34.192.156.240', 443)>
+2021-11-30 14:11:42.515071 (Thread-1): Compiling test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb
+2021-11-30 14:11:42.528273 (Thread-1): Writing injected SQL for node "test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb"
+2021-11-30 14:11:42.545657 (Thread-1): finished collecting timing info
+2021-11-30 14:11:42.557039 (Thread-1): Writing runtime SQL for node "test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb"
+2021-11-30 14:11:42.567259 (Thread-1): Using athena connection "test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb".
+2021-11-30 14:11:42.568042 (Thread-1): On test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        state as value_field,
+        count(*) as n_records
+
+    from dbt.New_England
+    group by state
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'ME','NH','CT','MA','RI'
+)
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:11:42.569722 (Thread-1): Opening a new connection, currently in state closed
+2021-11-30 14:11:42.586688 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        state as value_field,
+        count(*) as n_records
+
+    from dbt.New_England
+    group by state
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'ME','NH','CT','MA','RI'
+)
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:11:47.629775 (Thread-1): SQL status: OK -1 in 5.06 seconds
+2021-11-30 14:11:47.633861 (Thread-1): finished collecting timing info
+2021-11-30 14:11:47.634861 (Thread-1): On test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb: Close
+2021-11-30 14:11:47.637712 (Thread-1): 14:11:47 | 1 of 12 PASS accepted_values_New_England_state__ME__NH__CT__MA__RI... [PASS in 5.13s]
+2021-11-30 14:11:47.640236 (Thread-1): Finished running node test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb
+2021-11-30 14:11:47.642086 (Thread-1): Began running node test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f
+2021-11-30 14:11:47.643920 (Thread-1): 14:11:47 | 2 of 12 START test accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad [RUN]
+2021-11-30 14:11:47.646438 (Thread-1): Acquiring new athena connection "test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f".
+2021-11-30 14:11:47.648657 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46144), raddr=('34.192.156.240', 443)>
+2021-11-30 14:11:47.650088 (Thread-1): Compiling test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f
+2021-11-30 14:11:47.656776 (Thread-1): Writing injected SQL for node "test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f"
+2021-11-30 14:11:47.660887 (Thread-1): finished collecting timing info
+2021-11-30 14:11:47.662933 (Thread-1): Writing runtime SQL for node "test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f"
+2021-11-30 14:11:47.667868 (Thread-1): Using athena connection "test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f".
+2021-11-30 14:11:47.690082 (Thread-1): On test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        city1 as value_field,
+        count(*) as n_records
+
+    from dbt.Small_Towns
+    group by city1
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Portland','Lebanon','Millinocket','Center Hill','Muce','Key West','Menomonie','El Paso','Lakeland','Bagdad'
+)
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:11:47.691927 (Thread-1): Opening a new connection, currently in state closed
+2021-11-30 14:11:47.712562 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+with all_values as (
+
+    select
+        city1 as value_field,
+        count(*) as n_records
+
+    from dbt.Small_Towns
+    group by city1
+
+)
+
+select *
+from all_values
+where value_field not in (
+    'Portland','Lebanon','Millinocket','Center Hill','Muce','Key West','Menomonie','El Paso','Lakeland','Bagdad'
+)
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:11:52.783405 (Thread-1): SQL status: OK -1 in 5.09 seconds
+2021-11-30 14:11:52.795177 (Thread-1): finished collecting timing info
+2021-11-30 14:11:52.798716 (Thread-1): On test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f: Close
+2021-11-30 14:11:52.805999 (Thread-1): 14:11:52 | 2 of 12 PASS accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad [PASS in 5.16s]
+2021-11-30 14:11:52.809731 (Thread-1): Finished running node test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f
+2021-11-30 14:11:52.816448 (Thread-1): Began running node test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa
+2021-11-30 14:11:52.821272 (Thread-1): 14:11:52 | 3 of 12 START test not_null_New_England_bldg_fid..................... [RUN]
+2021-11-30 14:11:52.825676 (Thread-1): Acquiring new athena connection "test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa".
+2021-11-30 14:11:52.829106 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46146), raddr=('34.192.156.240', 443)>
+2021-11-30 14:11:52.832757 (Thread-1): Compiling test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa
+2021-11-30 14:11:52.843937 (Thread-1): Writing injected SQL for node "test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa"
+2021-11-30 14:11:52.852497 (Thread-1): finished collecting timing info
+2021-11-30 14:11:52.855880 (Thread-1): Writing runtime SQL for node "test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa"
+2021-11-30 14:11:52.860033 (Thread-1): Using athena connection "test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa".
+2021-11-30 14:11:52.860797 (Thread-1): On test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from dbt.New_England
+where bldg_fid is null
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:11:52.862380 (Thread-1): Opening a new connection, currently in state closed
+2021-11-30 14:11:52.879842 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from dbt.New_England
+where bldg_fid is null
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:11:57.913088 (Thread-1): SQL status: OK -1 in 5.05 seconds
+2021-11-30 14:11:57.923069 (Thread-1): finished collecting timing info
+2021-11-30 14:11:57.926131 (Thread-1): On test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa: Close
+2021-11-30 14:11:57.934254 (Thread-1): 14:11:57 | 3 of 12 PASS not_null_New_England_bldg_fid........................... [PASS in 5.11s]
+2021-11-30 14:11:57.938217 (Thread-1): Finished running node test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa
+2021-11-30 14:11:57.942387 (Thread-1): Began running node test.my_new_project.not_null_New_England_gid.8118bef777
+2021-11-30 14:11:57.946725 (Thread-1): 14:11:57 | 4 of 12 START test not_null_New_England_gid.......................... [RUN]
+2021-11-30 14:11:57.949900 (Thread-1): Acquiring new athena connection "test.my_new_project.not_null_New_England_gid.8118bef777".
+2021-11-30 14:11:57.954183 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46148), raddr=('34.192.156.240', 443)>
+2021-11-30 14:11:57.959076 (Thread-1): Compiling test.my_new_project.not_null_New_England_gid.8118bef777
+2021-11-30 14:11:57.966753 (Thread-1): Writing injected SQL for node "test.my_new_project.not_null_New_England_gid.8118bef777"
+2021-11-30 14:11:57.974111 (Thread-1): finished collecting timing info
+2021-11-30 14:11:57.978492 (Thread-1): Writing runtime SQL for node "test.my_new_project.not_null_New_England_gid.8118bef777"
+2021-11-30 14:11:57.987311 (Thread-1): Using athena connection "test.my_new_project.not_null_New_England_gid.8118bef777".
+2021-11-30 14:11:57.988360 (Thread-1): On test.my_new_project.not_null_New_England_gid.8118bef777: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.not_null_New_England_gid.8118bef777"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from dbt.New_England
+where gid is null
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:11:57.991387 (Thread-1): Opening a new connection, currently in state closed
+2021-11-30 14:11:58.009656 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.not_null_New_England_gid.8118bef777"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from dbt.New_England
+where gid is null
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:04.171404 (Thread-1): SQL status: OK -1 in 6.18 seconds
+2021-11-30 14:12:04.178980 (Thread-1): finished collecting timing info
+2021-11-30 14:12:04.186383 (Thread-1): On test.my_new_project.not_null_New_England_gid.8118bef777: Close
+2021-11-30 14:12:04.191663 (Thread-1): 14:12:04 | 4 of 12 PASS not_null_New_England_gid................................ [PASS in 6.24s]
+2021-11-30 14:12:04.196189 (Thread-1): Finished running node test.my_new_project.not_null_New_England_gid.8118bef777
+2021-11-30 14:12:04.199543 (Thread-1): Began running node test.my_new_project.not_null_New_England_state.b285ec8c7f
+2021-11-30 14:12:04.203581 (Thread-1): 14:12:04 | 5 of 12 START test not_null_New_England_state........................ [RUN]
+2021-11-30 14:12:04.209355 (Thread-1): Acquiring new athena connection "test.my_new_project.not_null_New_England_state.b285ec8c7f".
+2021-11-30 14:12:04.212329 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46150), raddr=('34.192.156.240', 443)>
+2021-11-30 14:12:04.215544 (Thread-1): Compiling test.my_new_project.not_null_New_England_state.b285ec8c7f
+2021-11-30 14:12:04.226787 (Thread-1): Writing injected SQL for node "test.my_new_project.not_null_New_England_state.b285ec8c7f"
+2021-11-30 14:12:04.232488 (Thread-1): finished collecting timing info
+2021-11-30 14:12:04.238732 (Thread-1): Writing runtime SQL for node "test.my_new_project.not_null_New_England_state.b285ec8c7f"
+2021-11-30 14:12:04.246403 (Thread-1): Using athena connection "test.my_new_project.not_null_New_England_state.b285ec8c7f".
+2021-11-30 14:12:04.247482 (Thread-1): On test.my_new_project.not_null_New_England_state.b285ec8c7f: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.not_null_New_England_state.b285ec8c7f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from dbt.New_England
+where state is null
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:04.248878 (Thread-1): Opening a new connection, currently in state closed
+2021-11-30 14:12:04.269458 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.not_null_New_England_state.b285ec8c7f"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from dbt.New_England
+where state is null
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:09.368411 (Thread-1): SQL status: OK -1 in 5.12 seconds
+2021-11-30 14:12:09.377424 (Thread-1): finished collecting timing info
+2021-11-30 14:12:09.380513 (Thread-1): On test.my_new_project.not_null_New_England_state.b285ec8c7f: Close
+2021-11-30 14:12:09.394302 (Thread-1): 14:12:09 | 5 of 12 PASS not_null_New_England_state.............................. [PASS in 5.19s]
+2021-11-30 14:12:09.399444 (Thread-1): Finished running node test.my_new_project.not_null_New_England_state.b285ec8c7f
+2021-11-30 14:12:09.404771 (Thread-1): Began running node test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd
+2021-11-30 14:12:09.410375 (Thread-1): 14:12:09 | 6 of 12 START test not_null_Small_Towns_bldg_fid..................... [RUN]
+2021-11-30 14:12:09.415450 (Thread-1): Acquiring new athena connection "test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd".
+2021-11-30 14:12:09.421740 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46152), raddr=('34.192.156.240', 443)>
+2021-11-30 14:12:09.428355 (Thread-1): Compiling test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd
+2021-11-30 14:12:09.434677 (Thread-1): Writing injected SQL for node "test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd"
+2021-11-30 14:12:09.443859 (Thread-1): finished collecting timing info
+2021-11-30 14:12:09.448711 (Thread-1): Writing runtime SQL for node "test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd"
+2021-11-30 14:12:09.456905 (Thread-1): Using athena connection "test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd".
+2021-11-30 14:12:09.457905 (Thread-1): On test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from dbt.Small_Towns
+where bldg_fid is null
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:09.459222 (Thread-1): Opening a new connection, currently in state closed
+2021-11-30 14:12:09.475346 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from dbt.Small_Towns
+where bldg_fid is null
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:15.629525 (Thread-1): SQL status: OK -1 in 6.17 seconds
+2021-11-30 14:12:15.643930 (Thread-1): finished collecting timing info
+2021-11-30 14:12:15.646953 (Thread-1): On test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd: Close
+2021-11-30 14:12:15.653852 (Thread-1): 14:12:15 | 6 of 12 PASS not_null_Small_Towns_bldg_fid........................... [PASS in 6.24s]
+2021-11-30 14:12:15.659857 (Thread-1): Finished running node test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd
+2021-11-30 14:12:15.663654 (Thread-1): Began running node test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1
+2021-11-30 14:12:15.667399 (Thread-1): 14:12:15 | 7 of 12 START test not_null_Small_Towns_city......................... [RUN]
+2021-11-30 14:12:15.671208 (Thread-1): Acquiring new athena connection "test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1".
+2021-11-30 14:12:15.673853 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46154), raddr=('34.192.156.240', 443)>
+2021-11-30 14:12:15.679412 (Thread-1): Compiling test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1
+2021-11-30 14:12:15.687336 (Thread-1): Writing injected SQL for node "test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1"
+2021-11-30 14:12:15.694251 (Thread-1): finished collecting timing info
+2021-11-30 14:12:15.698474 (Thread-1): Writing runtime SQL for node "test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1"
+2021-11-30 14:12:15.705201 (Thread-1): Using athena connection "test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1".
+2021-11-30 14:12:15.706566 (Thread-1): On test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from dbt.Small_Towns
+where city is null
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:15.708755 (Thread-1): Opening a new connection, currently in state closed
+2021-11-30 14:12:15.726320 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from dbt.Small_Towns
+where city is null
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:20.816915 (Thread-1): SQL status: OK -1 in 5.11 seconds
+2021-11-30 14:12:20.831298 (Thread-1): finished collecting timing info
+2021-11-30 14:12:20.833782 (Thread-1): On test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1: Close
+2021-11-30 14:12:20.841419 (Thread-1): 14:12:20 | 7 of 12 PASS not_null_Small_Towns_city............................... [PASS in 5.17s]
+2021-11-30 14:12:20.845993 (Thread-1): Finished running node test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1
+2021-11-30 14:12:20.849510 (Thread-1): Began running node test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb
+2021-11-30 14:12:20.852904 (Thread-1): 14:12:20 | 8 of 12 START test not_null_Small_Towns_gid.......................... [RUN]
+2021-11-30 14:12:20.856876 (Thread-1): Acquiring new athena connection "test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb".
+2021-11-30 14:12:20.862554 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46156), raddr=('34.192.156.240', 443)>
+2021-11-30 14:12:20.865001 (Thread-1): Compiling test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb
+2021-11-30 14:12:20.873117 (Thread-1): Writing injected SQL for node "test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb"
+2021-11-30 14:12:20.881409 (Thread-1): finished collecting timing info
+2021-11-30 14:12:20.884464 (Thread-1): Writing runtime SQL for node "test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb"
+2021-11-30 14:12:20.891810 (Thread-1): Using athena connection "test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb".
+2021-11-30 14:12:20.892961 (Thread-1): On test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from dbt.Small_Towns
+where gid is null
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:20.894304 (Thread-1): Opening a new connection, currently in state closed
+2021-11-30 14:12:20.911901 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select *
+from dbt.Small_Towns
+where gid is null
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:27.038718 (Thread-1): SQL status: OK -1 in 6.14 seconds
+2021-11-30 14:12:27.049238 (Thread-1): finished collecting timing info
+2021-11-30 14:12:27.052526 (Thread-1): On test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb: Close
+2021-11-30 14:12:27.062221 (Thread-1): 14:12:27 | 8 of 12 PASS not_null_Small_Towns_gid................................ [PASS in 6.20s]
+2021-11-30 14:12:27.065645 (Thread-1): Finished running node test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb
+2021-11-30 14:12:27.070353 (Thread-1): Began running node test.my_new_project.unique_New_England_bldg_fid.655f25e331
+2021-11-30 14:12:27.074614 (Thread-1): 14:12:27 | 9 of 12 START test unique_New_England_bldg_fid....................... [RUN]
+2021-11-30 14:12:27.079413 (Thread-1): Acquiring new athena connection "test.my_new_project.unique_New_England_bldg_fid.655f25e331".
+2021-11-30 14:12:27.085307 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46158), raddr=('34.192.156.240', 443)>
+2021-11-30 14:12:27.090288 (Thread-1): Compiling test.my_new_project.unique_New_England_bldg_fid.655f25e331
+2021-11-30 14:12:27.101446 (Thread-1): Writing injected SQL for node "test.my_new_project.unique_New_England_bldg_fid.655f25e331"
+2021-11-30 14:12:27.109004 (Thread-1): finished collecting timing info
+2021-11-30 14:12:27.113331 (Thread-1): Writing runtime SQL for node "test.my_new_project.unique_New_England_bldg_fid.655f25e331"
+2021-11-30 14:12:27.126244 (Thread-1): Using athena connection "test.my_new_project.unique_New_England_bldg_fid.655f25e331".
+2021-11-30 14:12:27.127337 (Thread-1): On test.my_new_project.unique_New_England_bldg_fid.655f25e331: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.unique_New_England_bldg_fid.655f25e331"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    bldg_fid as unique_field,
+    count(*) as n_records
+
+from dbt.New_England
+where bldg_fid is not null
+group by bldg_fid
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:27.129389 (Thread-1): Opening a new connection, currently in state closed
+2021-11-30 14:12:27.158247 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.unique_New_England_bldg_fid.655f25e331"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    bldg_fid as unique_field,
+    count(*) as n_records
+
+from dbt.New_England
+where bldg_fid is not null
+group by bldg_fid
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:32.208971 (Thread-1): SQL status: OK -1 in 5.08 seconds
+2021-11-30 14:12:32.225421 (Thread-1): finished collecting timing info
+2021-11-30 14:12:32.228909 (Thread-1): On test.my_new_project.unique_New_England_bldg_fid.655f25e331: Close
+2021-11-30 14:12:32.238410 (Thread-1): 14:12:32 | 9 of 12 PASS unique_New_England_bldg_fid............................. [PASS in 5.16s]
+2021-11-30 14:12:32.241467 (Thread-1): Finished running node test.my_new_project.unique_New_England_bldg_fid.655f25e331
+2021-11-30 14:12:32.246287 (Thread-1): Began running node test.my_new_project.unique_New_England_gid.2161d3d211
+2021-11-30 14:12:32.250231 (Thread-1): 14:12:32 | 10 of 12 START test unique_New_England_gid........................... [RUN]
+2021-11-30 14:12:32.254160 (Thread-1): Acquiring new athena connection "test.my_new_project.unique_New_England_gid.2161d3d211".
+2021-11-30 14:12:32.257950 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46160), raddr=('34.192.156.240', 443)>
+2021-11-30 14:12:32.263288 (Thread-1): Compiling test.my_new_project.unique_New_England_gid.2161d3d211
+2021-11-30 14:12:32.273849 (Thread-1): Writing injected SQL for node "test.my_new_project.unique_New_England_gid.2161d3d211"
+2021-11-30 14:12:32.280570 (Thread-1): finished collecting timing info
+2021-11-30 14:12:32.287918 (Thread-1): Writing runtime SQL for node "test.my_new_project.unique_New_England_gid.2161d3d211"
+2021-11-30 14:12:32.292191 (Thread-1): Using athena connection "test.my_new_project.unique_New_England_gid.2161d3d211".
+2021-11-30 14:12:32.293205 (Thread-1): On test.my_new_project.unique_New_England_gid.2161d3d211: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.unique_New_England_gid.2161d3d211"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    gid as unique_field,
+    count(*) as n_records
+
+from dbt.New_England
+where gid is not null
+group by gid
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:32.299276 (Thread-1): Opening a new connection, currently in state closed
+2021-11-30 14:12:32.319671 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.unique_New_England_gid.2161d3d211"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    gid as unique_field,
+    count(*) as n_records
+
+from dbt.New_England
+where gid is not null
+group by gid
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:37.336099 (Thread-1): SQL status: OK -1 in 5.04 seconds
+2021-11-30 14:12:37.353351 (Thread-1): finished collecting timing info
+2021-11-30 14:12:37.356906 (Thread-1): On test.my_new_project.unique_New_England_gid.2161d3d211: Close
+2021-11-30 14:12:37.364240 (Thread-1): 14:12:37 | 10 of 12 PASS unique_New_England_gid................................. [PASS in 5.11s]
+2021-11-30 14:12:37.369985 (Thread-1): Finished running node test.my_new_project.unique_New_England_gid.2161d3d211
+2021-11-30 14:12:37.377664 (Thread-1): Began running node test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd
+2021-11-30 14:12:37.382200 (Thread-1): 14:12:37 | 11 of 12 START test unique_Small_Towns_bldg_fid...................... [RUN]
+2021-11-30 14:12:37.386282 (Thread-1): Acquiring new athena connection "test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd".
+2021-11-30 14:12:37.389929 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46162), raddr=('34.192.156.240', 443)>
+2021-11-30 14:12:37.394600 (Thread-1): Compiling test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd
+2021-11-30 14:12:37.401437 (Thread-1): Writing injected SQL for node "test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd"
+2021-11-30 14:12:37.409557 (Thread-1): finished collecting timing info
+2021-11-30 14:12:37.416284 (Thread-1): Writing runtime SQL for node "test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd"
+2021-11-30 14:12:37.425120 (Thread-1): Using athena connection "test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd".
+2021-11-30 14:12:37.426340 (Thread-1): On test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    bldg_fid as unique_field,
+    count(*) as n_records
+
+from dbt.Small_Towns
+where bldg_fid is not null
+group by bldg_fid
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:37.428373 (Thread-1): Opening a new connection, currently in state closed
+2021-11-30 14:12:37.454991 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    bldg_fid as unique_field,
+    count(*) as n_records
+
+from dbt.Small_Towns
+where bldg_fid is not null
+group by bldg_fid
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:42.508991 (Thread-1): SQL status: OK -1 in 5.08 seconds
+2021-11-30 14:12:42.519135 (Thread-1): finished collecting timing info
+2021-11-30 14:12:42.524854 (Thread-1): On test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd: Close
+2021-11-30 14:12:42.533175 (Thread-1): 14:12:42 | 11 of 12 FAIL 3 unique_Small_Towns_bldg_fid.......................... [FAIL 3 in 5.15s]
+2021-11-30 14:12:42.538713 (Thread-1): Finished running node test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd
+2021-11-30 14:12:42.543216 (Thread-1): Began running node test.my_new_project.unique_Small_Towns_gid.9f44b76807
+2021-11-30 14:12:42.546748 (Thread-1): 14:12:42 | 12 of 12 START test unique_Small_Towns_gid........................... [RUN]
+2021-11-30 14:12:42.551661 (Thread-1): Acquiring new athena connection "test.my_new_project.unique_Small_Towns_gid.9f44b76807".
+2021-11-30 14:12:42.554158 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46164), raddr=('34.192.156.240', 443)>
+2021-11-30 14:12:42.559749 (Thread-1): Compiling test.my_new_project.unique_Small_Towns_gid.9f44b76807
+2021-11-30 14:12:42.564980 (Thread-1): Writing injected SQL for node "test.my_new_project.unique_Small_Towns_gid.9f44b76807"
+2021-11-30 14:12:42.572014 (Thread-1): finished collecting timing info
+2021-11-30 14:12:42.576225 (Thread-1): Writing runtime SQL for node "test.my_new_project.unique_Small_Towns_gid.9f44b76807"
+2021-11-30 14:12:42.584768 (Thread-1): Using athena connection "test.my_new_project.unique_Small_Towns_gid.9f44b76807".
+2021-11-30 14:12:42.585821 (Thread-1): On test.my_new_project.unique_Small_Towns_gid.9f44b76807: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.unique_Small_Towns_gid.9f44b76807"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    gid as unique_field,
+    count(*) as n_records
+
+from dbt.Small_Towns
+where gid is not null
+group by gid
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:42.587147 (Thread-1): Opening a new connection, currently in state closed
+2021-11-30 14:12:42.604997 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "test.my_new_project.unique_Small_Towns_gid.9f44b76807"} */
+select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+    
+
+select
+    gid as unique_field,
+    count(*) as n_records
+
+from dbt.Small_Towns
+where gid is not null
+group by gid
+having count(*) > 1
+
+
+
+      
+    ) dbt_internal_test
+2021-11-30 14:12:47.803011 (Thread-1): SQL status: OK -1 in 5.22 seconds
+2021-11-30 14:12:47.807031 (Thread-1): finished collecting timing info
+2021-11-30 14:12:47.808304 (Thread-1): On test.my_new_project.unique_Small_Towns_gid.9f44b76807: Close
+2021-11-30 14:12:47.810868 (Thread-1): 14:12:47 | 12 of 12 FAIL 3 unique_Small_Towns_gid............................... [FAIL 3 in 5.26s]
+2021-11-30 14:12:47.813138 (Thread-1): Finished running node test.my_new_project.unique_Small_Towns_gid.9f44b76807
+2021-11-30 14:12:47.819743 (MainThread): Acquiring new athena connection "master".
+2021-11-30 14:12:47.821074 (MainThread): 14:12:47 | 
+2021-11-30 14:12:47.823236 (MainThread): 14:12:47 | Finished running 12 tests in 68.41s.
+2021-11-30 14:12:47.825080 (MainThread): Connection 'master' was properly closed.
+2021-11-30 14:12:47.827672 (MainThread): Connection 'test.my_new_project.unique_Small_Towns_gid.9f44b76807' was properly closed.
+2021-11-30 14:12:47.830473 (MainThread): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 46166), raddr=('34.192.156.240', 443)>
+2021-11-30 14:12:47.851027 (MainThread): 
+2021-11-30 14:12:47.852040 (MainThread): Completed with 2 errors and 0 warnings:
+2021-11-30 14:12:47.855084 (MainThread): 
+2021-11-30 14:12:47.856787 (MainThread): Failure in test unique_Small_Towns_bldg_fid (models/schema.yml)
+2021-11-30 14:12:47.858590 (MainThread):   Got 3 results, configured to fail if != 0
+2021-11-30 14:12:47.860313 (MainThread): 
+2021-11-30 14:12:47.861982 (MainThread):   compiled SQL at target/compiled/my_new_project/models/schema.yml/schema_test/unique_Small_Towns_bldg_fid.sql
+2021-11-30 14:12:47.863562 (MainThread): 
+2021-11-30 14:12:47.865763 (MainThread): Failure in test unique_Small_Towns_gid (models/schema.yml)
+2021-11-30 14:12:47.870962 (MainThread):   Got 3 results, configured to fail if != 0
+2021-11-30 14:12:47.875185 (MainThread): 
+2021-11-30 14:12:47.877655 (MainThread):   compiled SQL at target/compiled/my_new_project/models/schema.yml/schema_test/unique_Small_Towns_gid.sql
+2021-11-30 14:12:47.881077 (MainThread): 
+Done. PASS=10 WARN=0 ERROR=2 SKIP=0 TOTAL=12
+2021-11-30 14:12:47.883635 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa83eb430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa83eb460>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffabb9a310>]}
+2021-11-30 14:12:47.888910 (MainThread): Flushing usage events
