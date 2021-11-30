@@ -1,5 +1,9 @@
-create or replace view
+create table
     dbt.New_England
+
+    with (
+        format='parquet'
+    )
   as
     /*
 SELECT * FROM "defaultdb"."resby_puma_northeast" puma
@@ -17,3 +21,5 @@ SELECT * FROM "defaultdb"."buildings" buildings
 inner join dbt.Region_Table region
 on buildings.state=region.state1
 limit 10;
+
+  
