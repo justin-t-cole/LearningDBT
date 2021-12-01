@@ -24202,3 +24202,854 @@ WITH views AS (
 2021-12-01 09:19:07.476302 (MainThread): Connection 'generate_catalog' was properly closed.
 2021-12-01 09:19:07.478080 (MainThread): Connection 'awsdatacatalog.information_schema' was properly closed.
 2021-12-01 09:19:07.482733 (MainThread): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 58270), raddr=('52.5.210.250', 443)>
+2021-12-01 14:32:04.480980 (MainThread): Running with dbt=0.21.0
+2021-12-01 14:32:04.543056 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.list.ListTask'>, debug=False, defer=None, exclude=None, greedy=False, log_cache_events=False, log_format='default', models=None, output='selector', output_keys=None, partial_parse=None, profile=None, profiles_dir='/home/vscode/.dbt', project_dir=None, record_timing_info=None, resource_types=[], rpc_method=None, select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', warn_error=False, which='list', write_json=True)
+2021-12-01 14:32:04.549280 (MainThread): Tracking: tracking
+2021-12-01 14:32:04.551797 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacb22f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffab2081f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacab8430>]}
+2021-12-01 14:32:04.561023 (MainThread): Partial parsing not enabled
+2021-12-01 14:32:04.582979 (MainThread): Parsing macros/catalog.sql
+2021-12-01 14:32:04.585687 (MainThread): Parsing macros/adapters.sql
+2021-12-01 14:32:04.594756 (MainThread): Parsing macros/materializations/seed.sql
+2021-12-01 14:32:04.598570 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-12-01 14:32:04.599590 (MainThread): Parsing macros/materializations/table.sql
+2021-12-01 14:32:04.605601 (MainThread): Parsing macros/materializations/incremental.sql
+2021-12-01 14:32:04.618705 (MainThread): Parsing macros/materializations/view.sql
+2021-12-01 14:32:04.622662 (MainThread): Parsing macros/core.sql
+2021-12-01 14:32:04.625764 (MainThread): Parsing macros/materializations/test.sql
+2021-12-01 14:32:04.630815 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-01 14:32:04.636939 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-01 14:32:04.639961 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-01 14:32:04.644223 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-01 14:32:04.645636 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-01 14:32:04.651592 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-01 14:32:04.662981 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-01 14:32:04.675250 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-01 14:32:04.679841 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-01 14:32:04.688018 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-01 14:32:04.704468 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-01 14:32:04.713479 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-01 14:32:04.715101 (MainThread): Parsing macros/etc/query.sql
+2021-12-01 14:32:04.717124 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-01 14:32:04.719804 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-01 14:32:04.722945 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-01 14:32:04.725216 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-01 14:32:04.726738 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-01 14:32:04.732483 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-01 14:32:04.734668 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-01 14:32:04.737451 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-01 14:32:04.739290 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-01 14:32:04.741647 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-01 14:32:04.743174 (MainThread): Parsing macros/adapters/common.sql
+2021-12-01 14:32:04.851129 (MainThread): Acquiring new athena connection "model.my_new_project.Day_Filter".
+2021-12-01 14:32:04.858587 (MainThread): Acquiring new athena connection "model.my_new_project.NE_and_SmallTowns".
+2021-12-01 14:32:04.862843 (MainThread): Acquiring new athena connection "model.my_new_project.New_England".
+2021-12-01 14:32:04.866274 (MainThread): Acquiring new athena connection "model.my_new_project.Small_Towns".
+2021-12-01 14:32:04.889760 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.891601 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.894517 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.896670 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.903583 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.905359 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.911449 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.913815 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.916188 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.917733 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.919770 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.925132 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.926292 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.928580 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.931852 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 14:32:04.932772 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_New_England_state__state1__ref_region_table_.0525103524' (models/schema.yml) depends on a node named 'region_table' which was not found
+2021-12-01 14:32:04.935456 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_Small_Towns_city__city1__ref_random_small_towns_.cb2440f8d3' (models/schema.yml) depends on a node named 'random_small_towns' which was not found
+2021-12-01 14:32:04.952415 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4378c016-ddb2-4ba4-bdec-e191b0de67b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaad07400>]}
+2021-12-01 14:32:04.965546 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-01 14:32:04.967588 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4378c016-ddb2-4ba4-bdec-e191b0de67b0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffacad9df0>]}
+2021-12-01 14:32:04.968527 (MainThread): Found 4 models, 12 tests, 0 snapshots, 0 analyses, 162 macros, 0 operations, 2 seed files, 0 sources, 0 exposures
+2021-12-01 14:32:04.970923 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaac725e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaac72790>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaac72b20>]}
+2021-12-01 14:32:04.972864 (MainThread): Flushing usage events
+2021-12-01 14:32:05.303394 (MainThread): Connection 'model.my_new_project.Small_Towns' was properly closed.
+2021-12-01 19:29:33.021093 (MainThread): Running with dbt=0.21.0
+2021-12-01 19:29:33.092021 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/vscode/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-12-01 19:29:33.098528 (MainThread): Tracking: tracking
+2021-12-01 19:29:33.101584 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8dabe940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8f35ac40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8f35ad90>]}
+2021-12-01 19:29:33.112382 (MainThread): Partial parsing not enabled
+2021-12-01 19:29:33.128556 (MainThread): Parsing macros/catalog.sql
+2021-12-01 19:29:33.132485 (MainThread): Parsing macros/adapters.sql
+2021-12-01 19:29:33.141064 (MainThread): Parsing macros/materializations/seed.sql
+2021-12-01 19:29:33.143928 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-12-01 19:29:33.144995 (MainThread): Parsing macros/materializations/table.sql
+2021-12-01 19:29:33.148348 (MainThread): Parsing macros/materializations/incremental.sql
+2021-12-01 19:29:33.160746 (MainThread): Parsing macros/materializations/view.sql
+2021-12-01 19:29:33.164298 (MainThread): Parsing macros/core.sql
+2021-12-01 19:29:33.167484 (MainThread): Parsing macros/materializations/test.sql
+2021-12-01 19:29:33.172457 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-01 19:29:33.177939 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-01 19:29:33.181904 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-01 19:29:33.187040 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-01 19:29:33.211073 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-01 19:29:33.217428 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-01 19:29:33.228210 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-01 19:29:33.240286 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-01 19:29:33.245017 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-01 19:29:33.254886 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-01 19:29:33.271587 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-01 19:29:33.280712 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-01 19:29:33.282328 (MainThread): Parsing macros/etc/query.sql
+2021-12-01 19:29:33.283291 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-01 19:29:33.286336 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-01 19:29:33.288853 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-01 19:29:33.290305 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-01 19:29:33.292474 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-01 19:29:33.297986 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-01 19:29:33.300079 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-01 19:29:33.302011 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-01 19:29:33.303377 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-01 19:29:33.305515 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-01 19:29:33.307123 (MainThread): Parsing macros/adapters/common.sql
+2021-12-01 19:29:33.415929 (MainThread): Acquiring new athena connection "model.my_new_project.Day_Filter".
+2021-12-01 19:29:33.424184 (MainThread): Acquiring new athena connection "model.my_new_project.NE_and_SmallTowns".
+2021-12-01 19:29:33.427389 (MainThread): Acquiring new athena connection "model.my_new_project.New_England".
+2021-12-01 19:29:33.430704 (MainThread): Acquiring new athena connection "model.my_new_project.Small_Towns".
+2021-12-01 19:29:33.454547 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.456438 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.458093 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.459619 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.466483 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.468667 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.473732 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.475581 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.478197 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.480421 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.483008 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.487682 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.488497 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.490749 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.493978 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:29:33.495050 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_New_England_state__state1__ref_region_table_.0525103524' (models/schema.yml) depends on a node named 'region_table' which was not found
+2021-12-01 19:29:33.496528 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_Small_Towns_city__city1__ref_random_small_towns_.cb2440f8d3' (models/schema.yml) depends on a node named 'random_small_towns' which was not found
+2021-12-01 19:29:33.516195 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '8998cb1c-d8ff-4fba-abf1-7f2752f3bb6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8d4379d0>]}
+2021-12-01 19:29:33.530785 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-01 19:29:33.533142 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '8998cb1c-d8ff-4fba-abf1-7f2752f3bb6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8d441f70>]}
+2021-12-01 19:29:33.534296 (MainThread): Found 4 models, 12 tests, 0 snapshots, 0 analyses, 162 macros, 0 operations, 2 seed files, 0 sources, 0 exposures
+2021-12-01 19:29:33.537430 (MainThread): 
+2021-12-01 19:29:33.538253 (MainThread): Acquiring new athena connection "master".
+2021-12-01 19:29:33.540721 (ThreadPoolExecutor-0_0): Acquiring new athena connection "list_awsdatacatalog".
+2021-12-01 19:29:33.549559 (ThreadPoolExecutor-0_0): Using athena connection "list_awsdatacatalog".
+2021-12-01 19:29:33.550574 (ThreadPoolExecutor-0_0): On list_awsdatacatalog: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "list_awsdatacatalog"} */
+
+    select
+        distinct schema_name
+
+    from awsdatacatalog.INFORMATION_SCHEMA.schemata
+  
+2021-12-01 19:29:33.552110 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-01 19:29:33.644455 (ThreadPoolExecutor-0_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "list_awsdatacatalog"} */
+
+    select
+        distinct schema_name
+
+    from awsdatacatalog.INFORMATION_SCHEMA.schemata
+2021-12-01 19:29:35.411342 (ThreadPoolExecutor-0_0): SQL status: OK -1 in 1.86 seconds
+2021-12-01 19:29:35.413116 (ThreadPoolExecutor-0_0): On list_awsdatacatalog: Close
+2021-12-01 19:29:35.416203 (ThreadPoolExecutor-2_0): Acquiring new athena connection "list_awsdatacatalog_dbt".
+2021-12-01 19:29:35.417363 (ThreadPoolExecutor-2_0): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 54488), raddr=('34.196.212.32', 443)>
+2021-12-01 19:29:35.423043 (ThreadPoolExecutor-2_0): Using athena connection "list_awsdatacatalog_dbt".
+2021-12-01 19:29:35.423944 (ThreadPoolExecutor-2_0): On list_awsdatacatalog_dbt: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+  
+2021-12-01 19:29:35.425935 (ThreadPoolExecutor-2_0): Opening a new connection, currently in state closed
+2021-12-01 19:29:35.441837 (ThreadPoolExecutor-2_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+2021-12-01 19:29:38.316713 (ThreadPoolExecutor-2_0): SQL status: OK -1 in 2.89 seconds
+2021-12-01 19:29:38.327213 (ThreadPoolExecutor-2_0): On list_awsdatacatalog_dbt: Close
+2021-12-01 19:29:38.337220 (MainThread): 19:29:38 | Concurrency: 1 threads (target='dev')
+2021-12-01 19:29:38.343512 (MainThread): 19:29:38 | 
+2021-12-01 19:29:38.354129 (Thread-1): Began running node model.my_new_project.New_England
+2021-12-01 19:29:38.356551 (Thread-1): 19:29:38 | 1 of 3 START table model dbt.New_England............................. [RUN]
+2021-12-01 19:29:38.362656 (Thread-1): Acquiring new athena connection "model.my_new_project.New_England".
+2021-12-01 19:29:38.366477 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 54490), raddr=('34.196.212.32', 443)>
+2021-12-01 19:29:38.370520 (Thread-1): Compiling model.my_new_project.New_England
+2021-12-01 19:29:38.379283 (Thread-1): Writing injected SQL for node "model.my_new_project.New_England"
+2021-12-01 19:29:38.387056 (Thread-1): finished collecting timing info
+2021-12-01 19:29:38.395635 (Thread-1): finished collecting timing info
+2021-12-01 19:29:38.396592 (Thread-1): Compilation Error in model New_England (models/New_England.sql)
+  When searching for a relation, dbt found an approximate match. Instead of guessing 
+  which relation to use, dbt will move on. Please delete dbt.new_england, or rename it to be less ambiguous.
+  Searched for: dbt.New_England
+  Found: dbt.new_england
+  
+  > in macro materialization_table_athena (macros/materializations/table.sql)
+  > called by model New_England (models/New_England.sql)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 30, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 734, in get_relation
+    matches = self._make_match(relations_list, database, schema,
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 723, in _make_match
+    if relation.matches(**search):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/relation.py", line 99, in matches
+    dbt.exceptions.approximate_relation_match(target, self)
+  File "/usr/local/lib/python3.8/site-packages/dbt/exceptions.py", line 741, in approximate_relation_match
+    raise_compiler_error(
+  File "/usr/local/lib/python3.8/site-packages/dbt/exceptions.py", line 444, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in model New_England (models/New_England.sql)
+  When searching for a relation, dbt found an approximate match. Instead of guessing 
+  which relation to use, dbt will move on. Please delete dbt.new_england, or rename it to be less ambiguous.
+  Searched for: dbt.New_England
+  Found: dbt.new_england
+  
+  > in macro materialization_table_athena (macros/materializations/table.sql)
+  > called by model New_England (models/New_England.sql)
+2021-12-01 19:29:38.402975 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8998cb1c-d8ff-4fba-abf1-7f2752f3bb6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c9ec5e0>]}
+2021-12-01 19:29:38.404776 (Thread-1): 19:29:38 | 1 of 3 ERROR creating table model dbt.New_England.................... [ERROR in 0.04s]
+2021-12-01 19:29:38.405860 (Thread-1): Finished running node model.my_new_project.New_England
+2021-12-01 19:29:38.407204 (Thread-1): Began running node model.my_new_project.Small_Towns
+2021-12-01 19:29:38.408923 (Thread-1): 19:29:38 | 2 of 3 START table model dbt.Small_Towns............................. [RUN]
+2021-12-01 19:29:38.411209 (Thread-1): Acquiring new athena connection "model.my_new_project.Small_Towns".
+2021-12-01 19:29:38.414256 (Thread-1): Compiling model.my_new_project.Small_Towns
+2021-12-01 19:29:38.417260 (Thread-1): Writing injected SQL for node "model.my_new_project.Small_Towns"
+2021-12-01 19:29:38.421995 (Thread-1): finished collecting timing info
+2021-12-01 19:29:38.423724 (Thread-1): finished collecting timing info
+2021-12-01 19:29:38.426939 (Thread-1): Compilation Error in model Small_Towns (models/Small_Towns.sql)
+  When searching for a relation, dbt found an approximate match. Instead of guessing 
+  which relation to use, dbt will move on. Please delete dbt.small_towns, or rename it to be less ambiguous.
+  Searched for: dbt.Small_Towns
+  Found: dbt.small_towns
+  
+  > in macro materialization_table_athena (macros/materializations/table.sql)
+  > called by model Small_Towns (models/Small_Towns.sql)
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 30, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 734, in get_relation
+    matches = self._make_match(relations_list, database, schema,
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 723, in _make_match
+    if relation.matches(**search):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/relation.py", line 99, in matches
+    dbt.exceptions.approximate_relation_match(target, self)
+  File "/usr/local/lib/python3.8/site-packages/dbt/exceptions.py", line 741, in approximate_relation_match
+    raise_compiler_error(
+  File "/usr/local/lib/python3.8/site-packages/dbt/exceptions.py", line 444, in raise_compiler_error
+    raise CompilationException(msg, node)
+dbt.exceptions.CompilationException: Compilation Error in model Small_Towns (models/Small_Towns.sql)
+  When searching for a relation, dbt found an approximate match. Instead of guessing 
+  which relation to use, dbt will move on. Please delete dbt.small_towns, or rename it to be less ambiguous.
+  Searched for: dbt.Small_Towns
+  Found: dbt.small_towns
+  
+  > in macro materialization_table_athena (macros/materializations/table.sql)
+  > called by model Small_Towns (models/Small_Towns.sql)
+2021-12-01 19:29:38.430449 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '8998cb1c-d8ff-4fba-abf1-7f2752f3bb6c', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c9ec5e0>]}
+2021-12-01 19:29:38.432093 (Thread-1): 19:29:38 | 2 of 3 ERROR creating table model dbt.Small_Towns.................... [ERROR in 0.02s]
+2021-12-01 19:29:38.433350 (Thread-1): Finished running node model.my_new_project.Small_Towns
+2021-12-01 19:29:38.435793 (Thread-1): Began running node model.my_new_project.NE_and_SmallTowns
+2021-12-01 19:29:38.437482 (Thread-1): 19:29:38 | 3 of 3 SKIP relation dbt.NE_and_SmallTowns........................... [SKIP]
+2021-12-01 19:29:38.438770 (Thread-1): Finished running node model.my_new_project.NE_and_SmallTowns
+2021-12-01 19:29:38.442297 (MainThread): Acquiring new athena connection "master".
+2021-12-01 19:29:38.444425 (MainThread): 19:29:38 | 
+2021-12-01 19:29:38.446055 (MainThread): 19:29:38 | Finished running 3 table models in 4.91s.
+2021-12-01 19:29:38.447251 (MainThread): Connection 'master' was properly closed.
+2021-12-01 19:29:38.449144 (MainThread): Connection 'model.my_new_project.Small_Towns' was properly closed.
+2021-12-01 19:29:38.464221 (MainThread): 
+2021-12-01 19:29:38.465132 (MainThread): Completed with 2 errors and 0 warnings:
+2021-12-01 19:29:38.467146 (MainThread): 
+2021-12-01 19:29:38.469066 (MainThread): Compilation Error in model New_England (models/New_England.sql)
+2021-12-01 19:29:38.470894 (MainThread):   When searching for a relation, dbt found an approximate match. Instead of guessing 
+2021-12-01 19:29:38.474067 (MainThread):   which relation to use, dbt will move on. Please delete dbt.new_england, or rename it to be less ambiguous.
+2021-12-01 19:29:38.480008 (MainThread):   Searched for: dbt.New_England
+2021-12-01 19:29:38.481980 (MainThread):   Found: dbt.new_england
+2021-12-01 19:29:38.484279 (MainThread):   
+2021-12-01 19:29:38.486166 (MainThread):   > in macro materialization_table_athena (macros/materializations/table.sql)
+2021-12-01 19:29:38.488237 (MainThread):   > called by model New_England (models/New_England.sql)
+2021-12-01 19:29:38.489960 (MainThread): 
+2021-12-01 19:29:38.492239 (MainThread): Compilation Error in model Small_Towns (models/Small_Towns.sql)
+2021-12-01 19:29:38.496255 (MainThread):   When searching for a relation, dbt found an approximate match. Instead of guessing 
+2021-12-01 19:29:38.499004 (MainThread):   which relation to use, dbt will move on. Please delete dbt.small_towns, or rename it to be less ambiguous.
+2021-12-01 19:29:38.502140 (MainThread):   Searched for: dbt.Small_Towns
+2021-12-01 19:29:38.504451 (MainThread):   Found: dbt.small_towns
+2021-12-01 19:29:38.507143 (MainThread):   
+2021-12-01 19:29:38.509015 (MainThread):   > in macro materialization_table_athena (macros/materializations/table.sql)
+2021-12-01 19:29:38.513673 (MainThread):   > called by model Small_Towns (models/Small_Towns.sql)
+2021-12-01 19:29:38.517927 (MainThread): 
+Done. PASS=0 WARN=0 ERROR=2 SKIP=1 TOTAL=3
+2021-12-01 19:29:38.520428 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8d4379d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c9ecc40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8c1268b0>]}
+2021-12-01 19:29:38.523335 (MainThread): Flushing usage events
+2021-12-01 19:30:41.005511 (MainThread): Running with dbt=0.21.0
+2021-12-01 19:30:41.073557 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.run.RunTask'>, debug=False, defer=None, exclude=None, fail_fast=False, full_refresh=False, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/vscode/.dbt', project_dir=None, record_timing_info=None, rpc_method='run', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='run', write_json=True)
+2021-12-01 19:30:41.090832 (MainThread): Tracking: tracking
+2021-12-01 19:30:41.093013 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffadb66880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf401b20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffaf401dc0>]}
+2021-12-01 19:30:41.101127 (MainThread): Partial parsing not enabled
+2021-12-01 19:30:41.115870 (MainThread): Parsing macros/catalog.sql
+2021-12-01 19:30:41.119165 (MainThread): Parsing macros/adapters.sql
+2021-12-01 19:30:41.127926 (MainThread): Parsing macros/materializations/seed.sql
+2021-12-01 19:30:41.131455 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-12-01 19:30:41.132501 (MainThread): Parsing macros/materializations/table.sql
+2021-12-01 19:30:41.135308 (MainThread): Parsing macros/materializations/incremental.sql
+2021-12-01 19:30:41.150498 (MainThread): Parsing macros/materializations/view.sql
+2021-12-01 19:30:41.154338 (MainThread): Parsing macros/core.sql
+2021-12-01 19:30:41.157045 (MainThread): Parsing macros/materializations/test.sql
+2021-12-01 19:30:41.161135 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-01 19:30:41.167450 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-01 19:30:41.170610 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-01 19:30:41.175142 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-01 19:30:41.177495 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-01 19:30:41.184800 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-01 19:30:41.195775 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-01 19:30:41.211140 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-01 19:30:41.216471 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-01 19:30:41.225214 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-01 19:30:41.242135 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-01 19:30:41.251543 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-01 19:30:41.252999 (MainThread): Parsing macros/etc/query.sql
+2021-12-01 19:30:41.255247 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-01 19:30:41.257783 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-01 19:30:41.259805 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-01 19:30:41.261198 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-01 19:30:41.262939 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-01 19:30:41.268246 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-01 19:30:41.270318 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-01 19:30:41.272169 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-01 19:30:41.273347 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-01 19:30:41.275331 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-01 19:30:41.276900 (MainThread): Parsing macros/adapters/common.sql
+2021-12-01 19:30:41.383357 (MainThread): Acquiring new athena connection "model.my_new_project.Day_Filter".
+2021-12-01 19:30:41.390630 (MainThread): Acquiring new athena connection "model.my_new_project.NE_and_SmallTowns".
+2021-12-01 19:30:41.393478 (MainThread): Acquiring new athena connection "model.my_new_project.New_England".
+2021-12-01 19:30:41.396478 (MainThread): Acquiring new athena connection "model.my_new_project.Small_Towns".
+2021-12-01 19:30:41.419413 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.422141 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.423929 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.425880 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.432033 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.433983 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.439414 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.441631 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.444081 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.447085 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.448580 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.453421 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.454206 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.457762 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.461783 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:30:41.463020 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_New_England_state__state1__ref_region_table_.0525103524' (models/schema.yml) depends on a node named 'region_table' which was not found
+2021-12-01 19:30:41.464847 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_Small_Towns_city__city1__ref_random_small_towns_.cb2440f8d3' (models/schema.yml) depends on a node named 'random_small_towns' which was not found
+2021-12-01 19:30:41.479426 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '4267bb40-8bb4-44ae-9817-c4e19fa482c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad4ed0a0>]}
+2021-12-01 19:30:41.492402 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-01 19:30:41.494219 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '4267bb40-8bb4-44ae-9817-c4e19fa482c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffad4ed070>]}
+2021-12-01 19:30:41.495122 (MainThread): Found 4 models, 12 tests, 0 snapshots, 0 analyses, 162 macros, 0 operations, 2 seed files, 0 sources, 0 exposures
+2021-12-01 19:30:41.498401 (MainThread): 
+2021-12-01 19:30:41.499771 (MainThread): Acquiring new athena connection "master".
+2021-12-01 19:30:41.502948 (ThreadPoolExecutor-0_0): Acquiring new athena connection "list_awsdatacatalog".
+2021-12-01 19:30:41.510426 (ThreadPoolExecutor-0_0): Using athena connection "list_awsdatacatalog".
+2021-12-01 19:30:41.511122 (ThreadPoolExecutor-0_0): On list_awsdatacatalog: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "list_awsdatacatalog"} */
+
+    select
+        distinct schema_name
+
+    from awsdatacatalog.INFORMATION_SCHEMA.schemata
+  
+2021-12-01 19:30:41.513045 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-01 19:30:41.532268 (ThreadPoolExecutor-0_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "list_awsdatacatalog"} */
+
+    select
+        distinct schema_name
+
+    from awsdatacatalog.INFORMATION_SCHEMA.schemata
+2021-12-01 19:30:43.265644 (ThreadPoolExecutor-0_0): SQL status: OK -1 in 1.75 seconds
+2021-12-01 19:30:43.275932 (ThreadPoolExecutor-0_0): On list_awsdatacatalog: Close
+2021-12-01 19:30:43.283646 (ThreadPoolExecutor-2_0): Acquiring new athena connection "list_awsdatacatalog_dbt".
+2021-12-01 19:30:43.287450 (ThreadPoolExecutor-2_0): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 54494), raddr=('34.196.212.32', 443)>
+2021-12-01 19:30:43.302349 (ThreadPoolExecutor-2_0): Using athena connection "list_awsdatacatalog_dbt".
+2021-12-01 19:30:43.304170 (ThreadPoolExecutor-2_0): On list_awsdatacatalog_dbt: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+  
+2021-12-01 19:30:43.309071 (ThreadPoolExecutor-2_0): Opening a new connection, currently in state closed
+2021-12-01 19:30:43.336414 (ThreadPoolExecutor-2_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+2021-12-01 19:30:46.223003 (ThreadPoolExecutor-2_0): SQL status: OK -1 in 2.91 seconds
+2021-12-01 19:30:46.232956 (ThreadPoolExecutor-2_0): On list_awsdatacatalog_dbt: Close
+2021-12-01 19:30:46.238372 (MainThread): 19:30:46 | Concurrency: 1 threads (target='dev')
+2021-12-01 19:30:46.244060 (MainThread): 19:30:46 | 
+2021-12-01 19:30:46.258673 (Thread-1): Began running node model.my_new_project.New_England
+2021-12-01 19:30:46.261656 (Thread-1): 19:30:46 | 1 of 3 START table model dbt.New_England............................. [RUN]
+2021-12-01 19:30:46.267013 (Thread-1): Acquiring new athena connection "model.my_new_project.New_England".
+2021-12-01 19:30:46.270566 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 54496), raddr=('34.196.212.32', 443)>
+2021-12-01 19:30:46.273354 (Thread-1): Compiling model.my_new_project.New_England
+2021-12-01 19:30:46.279951 (Thread-1): Writing injected SQL for node "model.my_new_project.New_England"
+2021-12-01 19:30:46.287828 (Thread-1): finished collecting timing info
+2021-12-01 19:30:46.306044 (Thread-1): Writing runtime SQL for node "model.my_new_project.New_England"
+2021-12-01 19:30:46.310389 (Thread-1): Using athena connection "model.my_new_project.New_England".
+2021-12-01 19:30:46.311938 (Thread-1): On model.my_new_project.New_England: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "model.my_new_project.New_England"} */
+create table
+    dbt.New_England
+
+    with (
+        format='parquet'
+    )
+  as
+    /*
+SELECT * FROM "defaultdb"."resby_puma_northeast" puma
+inner join "defaultdb"."buildings" buildings
+on puma.bldg_id=buildings.bldg_fid
+
+limit 10;
+*/
+
+/* select * from dbt.Region_Table */
+
+/* In plain english: select all from the "buildings" table where the state value is in the Region_Table state column.  */
+
+SELECT * FROM "defaultdb"."buildings" buildings
+inner join dbt.Region_Table region
+on buildings.state=region.state1
+limit 10;
+
+  
+2021-12-01 19:30:46.314167 (Thread-1): Opening a new connection, currently in state closed
+2021-12-01 19:30:46.332208 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "model.my_new_project.New_England"} */
+create table
+    dbt.New_England
+
+    with (
+        format='parquet'
+    )
+  as
+    /*
+SELECT * FROM "defaultdb"."resby_puma_northeast" puma
+inner join "defaultdb"."buildings" buildings
+on puma.bldg_id=buildings.bldg_fid
+
+limit 10;
+*/
+
+/* select * from dbt.Region_Table */
+
+/* In plain english: select all from the "buildings" table where the state value is in the Region_Table state column.  */
+
+SELECT * FROM "defaultdb"."buildings" buildings
+inner join dbt.Region_Table region
+on buildings.state=region.state1
+limit 10;
+2021-12-01 19:30:51.269996 (Thread-1): SQL status: OK -1 in 4.96 seconds
+2021-12-01 19:30:51.277580 (Thread-1): Using athena connection "model.my_new_project.New_England".
+2021-12-01 19:30:51.282028 (Thread-1): On model.my_new_project.New_England: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "model.my_new_project.New_England"} */
+alter table dbt.New_England set tblproperties ('classification' = 'parquet')
+2021-12-01 19:30:51.287305 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "model.my_new_project.New_England"} */
+alter table dbt.New_England set tblproperties ('classification' = 'parquet')
+2021-12-01 19:30:52.822450 (Thread-1): SQL status: OK -1 in 1.54 seconds
+2021-12-01 19:30:52.844558 (Thread-1): finished collecting timing info
+2021-12-01 19:30:52.848115 (Thread-1): On model.my_new_project.New_England: Close
+2021-12-01 19:30:52.852645 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4267bb40-8bb4-44ae-9817-c4e19fa482c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7f9dfa0>]}
+2021-12-01 19:30:52.857204 (Thread-1): 19:30:52 | 1 of 3 OK created table model dbt.New_England........................ [OK -1 in 6.59s]
+2021-12-01 19:30:52.861198 (Thread-1): Finished running node model.my_new_project.New_England
+2021-12-01 19:30:52.866456 (Thread-1): Began running node model.my_new_project.Small_Towns
+2021-12-01 19:30:52.869491 (Thread-1): 19:30:52 | 2 of 3 START table model dbt.Small_Towns............................. [RUN]
+2021-12-01 19:30:52.875103 (Thread-1): Acquiring new athena connection "model.my_new_project.Small_Towns".
+2021-12-01 19:30:52.877977 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 54498), raddr=('34.196.212.32', 443)>
+2021-12-01 19:30:52.883546 (Thread-1): Compiling model.my_new_project.Small_Towns
+2021-12-01 19:30:52.889532 (Thread-1): Writing injected SQL for node "model.my_new_project.Small_Towns"
+2021-12-01 19:30:52.897146 (Thread-1): finished collecting timing info
+2021-12-01 19:30:52.900960 (Thread-1): Writing runtime SQL for node "model.my_new_project.Small_Towns"
+2021-12-01 19:30:52.905781 (Thread-1): Using athena connection "model.my_new_project.Small_Towns".
+2021-12-01 19:30:52.906896 (Thread-1): On model.my_new_project.Small_Towns: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "model.my_new_project.Small_Towns"} */
+create table
+    dbt.Small_Towns
+
+    with (
+        format='parquet'
+    )
+  as
+    SELECT * FROM "defaultdb"."buildings" buildings
+inner join dbt.Random_Small_Towns region
+on buildings.state=region.state1
+limit 10;
+
+  
+2021-12-01 19:30:52.908459 (Thread-1): Opening a new connection, currently in state closed
+2021-12-01 19:30:52.924569 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "model.my_new_project.Small_Towns"} */
+create table
+    dbt.Small_Towns
+
+    with (
+        format='parquet'
+    )
+  as
+    SELECT * FROM "defaultdb"."buildings" buildings
+inner join dbt.Random_Small_Towns region
+on buildings.state=region.state1
+limit 10;
+2021-12-01 19:30:57.910748 (Thread-1): SQL status: OK -1 in 5.00 seconds
+2021-12-01 19:30:57.919752 (Thread-1): Using athena connection "model.my_new_project.Small_Towns".
+2021-12-01 19:30:57.923840 (Thread-1): On model.my_new_project.Small_Towns: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "model.my_new_project.Small_Towns"} */
+alter table dbt.Small_Towns set tblproperties ('classification' = 'parquet')
+2021-12-01 19:30:57.930701 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "model.my_new_project.Small_Towns"} */
+alter table dbt.Small_Towns set tblproperties ('classification' = 'parquet')
+2021-12-01 19:30:59.473684 (Thread-1): SQL status: OK -1 in 1.54 seconds
+2021-12-01 19:30:59.482599 (Thread-1): finished collecting timing info
+2021-12-01 19:30:59.485776 (Thread-1): On model.my_new_project.Small_Towns: Close
+2021-12-01 19:30:59.491668 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4267bb40-8bb4-44ae-9817-c4e19fa482c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7f9dbb0>]}
+2021-12-01 19:30:59.501818 (Thread-1): 19:30:59 | 2 of 3 OK created table model dbt.Small_Towns........................ [OK -1 in 6.62s]
+2021-12-01 19:30:59.506055 (Thread-1): Finished running node model.my_new_project.Small_Towns
+2021-12-01 19:30:59.511597 (Thread-1): Began running node model.my_new_project.NE_and_SmallTowns
+2021-12-01 19:30:59.515176 (Thread-1): 19:30:59 | 3 of 3 START table model dbt.NE_and_SmallTowns....................... [RUN]
+2021-12-01 19:30:59.518580 (Thread-1): Acquiring new athena connection "model.my_new_project.NE_and_SmallTowns".
+2021-12-01 19:30:59.523326 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 54824), raddr=('3.232.113.208', 443)>
+2021-12-01 19:30:59.528612 (Thread-1): Compiling model.my_new_project.NE_and_SmallTowns
+2021-12-01 19:30:59.534690 (Thread-1): Writing injected SQL for node "model.my_new_project.NE_and_SmallTowns"
+2021-12-01 19:30:59.541224 (Thread-1): finished collecting timing info
+2021-12-01 19:30:59.546243 (Thread-1): Writing runtime SQL for node "model.my_new_project.NE_and_SmallTowns"
+2021-12-01 19:30:59.551164 (Thread-1): Using athena connection "model.my_new_project.NE_and_SmallTowns".
+2021-12-01 19:30:59.552424 (Thread-1): On model.my_new_project.NE_and_SmallTowns: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "model.my_new_project.NE_and_SmallTowns"} */
+create table
+    dbt.NE_and_SmallTowns
+
+    with (
+        format='parquet'
+    )
+  as
+    /* select * dbt.New_England union select * dbt.Small_Towns */
+
+  
+2021-12-01 19:30:59.554445 (Thread-1): Opening a new connection, currently in state closed
+2021-12-01 19:30:59.570587 (Thread-1): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "model.my_new_project.NE_and_SmallTowns"} */
+create table
+    dbt.NE_and_SmallTowns
+
+    with (
+        format='parquet'
+    )
+  as
+    /* select * dbt.New_England union select * dbt.Small_Towns */
+2021-12-01 19:30:59.817427 (Thread-1): Failed to execute query.
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/pyathena/common.py", line 307, in _execute
+    query_id = retry_api_call(
+  File "/usr/local/lib/python3.8/site-packages/pyathena/util.py", line 84, in retry_api_call
+    return retry(func, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/tenacity/__init__.py", line 404, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/usr/local/lib/python3.8/site-packages/tenacity/__init__.py", line 349, in iter
+    return fut.result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.8/site-packages/tenacity/__init__.py", line 407, in __call__
+    result = fn(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/botocore/client.py", line 276, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/usr/local/lib/python3.8/site-packages/botocore/client.py", line 586, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidRequestException: An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: line 9:66: mismatched input '<EOF>'. Expecting: '(', <query>
+2021-12-01 19:30:59.822664 (Thread-1): Error running SQL: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "node_id": "model.my_new_project.NE_and_SmallTowns"} */
+create table
+    dbt.NE_and_SmallTowns
+
+    with (
+        format='parquet'
+    )
+  as
+    /* select * dbt.New_England union select * dbt.Small_Towns */
+
+  
+2021-12-01 19:30:59.825645 (Thread-1): finished collecting timing info
+2021-12-01 19:30:59.827562 (Thread-1): On model.my_new_project.NE_and_SmallTowns: Close
+2021-12-01 19:30:59.829663 (Thread-1): Runtime Error in model NE_and_SmallTowns (models/NE_and_SmallTowns.sql)
+  An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: line 9:66: mismatched input '<EOF>'. Expecting: '(', <query>
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/pyathena/common.py", line 307, in _execute
+    query_id = retry_api_call(
+  File "/usr/local/lib/python3.8/site-packages/pyathena/util.py", line 84, in retry_api_call
+    return retry(func, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/tenacity/__init__.py", line 404, in __call__
+    do = self.iter(retry_state=retry_state)
+  File "/usr/local/lib/python3.8/site-packages/tenacity/__init__.py", line 349, in iter
+    return fut.result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 437, in result
+    return self.__get_result()
+  File "/usr/local/lib/python3.8/concurrent/futures/_base.py", line 389, in __get_result
+    raise self._exception
+  File "/usr/local/lib/python3.8/site-packages/tenacity/__init__.py", line 407, in __call__
+    result = fn(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/botocore/client.py", line 276, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/usr/local/lib/python3.8/site-packages/botocore/client.py", line 586, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.InvalidRequestException: An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: line 9:66: mismatched input '<EOF>'. Expecting: '(', <query>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/athena/connections.py", line 100, in exception_handler
+    yield
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 80, in add_query
+    cursor.execute(sql, bindings)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/athena/connections.py", line 72, in execute
+    query_id = self._execute(
+  File "/usr/local/lib/python3.8/site-packages/pyathena/common.py", line 315, in _execute
+    raise DatabaseError(*e.args) from e
+pyathena.error.DatabaseError: An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: line 9:66: mismatched input '<EOF>'. Expecting: '(', <query>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 348, in safe_run
+    result = self.compile_and_execute(manifest, ctx)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 291, in compile_and_execute
+    result = self.run(ctx.node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/base.py", line 393, in run
+    return self.execute(compiled_node, manifest)
+  File "/usr/local/lib/python3.8/site-packages/dbt/task/run.py", line 249, in execute
+    result = MacroGenerator(materialization_macro, context)()
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 54, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 333, in __call__
+    return self.call_macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/clients/jinja.py", line 260, in call_macro
+    return macro(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 675, in __call__
+    return self._invoke(arguments, autoescape)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 679, in _invoke
+    rv = self._func(*arguments)
+  File "<template>", line 41, in macro
+  File "/usr/local/lib/python3.8/site-packages/jinja2/sandbox.py", line 462, in call
+    return __context.call(__obj, *args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/jinja2/runtime.py", line 290, in call
+    return __obj(*args, **kwargs)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/base/impl.py", line 226, in execute
+    return self.connections.execute(
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 131, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/sql/connections.py", line 87, in add_query
+    return connection, cursor
+  File "/usr/local/lib/python3.8/contextlib.py", line 131, in __exit__
+    self.gen.throw(type, value, traceback)
+  File "/usr/local/lib/python3.8/site-packages/dbt/adapters/athena/connections.py", line 103, in exception_handler
+    raise RuntimeException(str(e)) from e
+dbt.exceptions.RuntimeException: Runtime Error in model NE_and_SmallTowns (models/NE_and_SmallTowns.sql)
+  An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: line 9:66: mismatched input '<EOF>'. Expecting: '(', <query>
+2021-12-01 19:30:59.834587 (Thread-1): Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '4267bb40-8bb4-44ae-9817-c4e19fa482c7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7ffd640>]}
+2021-12-01 19:30:59.836147 (Thread-1): 19:30:59 | 3 of 3 ERROR creating table model dbt.NE_and_SmallTowns.............. [ERROR in 0.32s]
+2021-12-01 19:30:59.837843 (Thread-1): Finished running node model.my_new_project.NE_and_SmallTowns
+2021-12-01 19:30:59.840538 (MainThread): Acquiring new athena connection "master".
+2021-12-01 19:30:59.842049 (MainThread): 19:30:59 | 
+2021-12-01 19:30:59.843202 (MainThread): 19:30:59 | Finished running 3 table models in 18.34s.
+2021-12-01 19:30:59.844856 (MainThread): Connection 'master' was properly closed.
+2021-12-01 19:30:59.846662 (MainThread): Connection 'model.my_new_project.NE_and_SmallTowns' was properly closed.
+2021-12-01 19:30:59.861105 (MainThread): 
+2021-12-01 19:30:59.861843 (MainThread): Completed with 1 error and 0 warnings:
+2021-12-01 19:30:59.863357 (MainThread): 
+2021-12-01 19:30:59.866475 (MainThread): Runtime Error in model NE_and_SmallTowns (models/NE_and_SmallTowns.sql)
+2021-12-01 19:30:59.868132 (MainThread):   An error occurred (InvalidRequestException) when calling the StartQueryExecution operation: line 9:66: mismatched input '<EOF>'. Expecting: '(', <query>
+2021-12-01 19:30:59.870102 (MainThread): 
+Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
+2021-12-01 19:30:59.872473 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffadb66880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa7ffdfd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa6db2520>]}
+2021-12-01 19:30:59.875364 (MainThread): Flushing usage events
+2021-12-01 19:48:39.295997 (MainThread): Running with dbt=0.21.0
+2021-12-01 19:48:39.358410 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.list.ListTask'>, debug=False, defer=None, exclude=None, greedy=False, log_cache_events=False, log_format='default', models=None, output='selector', output_keys=None, partial_parse=None, profile=None, profiles_dir='/home/vscode/.dbt', project_dir=None, record_timing_info=None, resource_types=[], rpc_method=None, select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', warn_error=False, which='list', write_json=True)
+2021-12-01 19:48:39.363792 (MainThread): Tracking: tracking
+2021-12-01 19:48:39.367475 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa39962e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa20a0910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa39493a0>]}
+2021-12-01 19:48:39.375577 (MainThread): Partial parsing not enabled
+2021-12-01 19:48:39.391394 (MainThread): Parsing macros/catalog.sql
+2021-12-01 19:48:39.394006 (MainThread): Parsing macros/adapters.sql
+2021-12-01 19:48:39.402315 (MainThread): Parsing macros/materializations/seed.sql
+2021-12-01 19:48:39.405281 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-12-01 19:48:39.406745 (MainThread): Parsing macros/materializations/table.sql
+2021-12-01 19:48:39.409341 (MainThread): Parsing macros/materializations/incremental.sql
+2021-12-01 19:48:39.422101 (MainThread): Parsing macros/materializations/view.sql
+2021-12-01 19:48:39.425446 (MainThread): Parsing macros/core.sql
+2021-12-01 19:48:39.428511 (MainThread): Parsing macros/materializations/test.sql
+2021-12-01 19:48:39.433554 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-01 19:48:39.439234 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-01 19:48:39.442463 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-01 19:48:39.446642 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-01 19:48:39.449026 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-01 19:48:39.455338 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-01 19:48:39.466418 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-01 19:48:39.479060 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-01 19:48:39.483664 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-01 19:48:39.491672 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-01 19:48:39.508388 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-01 19:48:39.519239 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-01 19:48:39.521885 (MainThread): Parsing macros/etc/query.sql
+2021-12-01 19:48:39.523929 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-01 19:48:39.526514 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-01 19:48:39.528337 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-01 19:48:39.531354 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-01 19:48:39.533856 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-01 19:48:39.539451 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-01 19:48:39.540880 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-01 19:48:39.543303 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-01 19:48:39.544583 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-01 19:48:39.547211 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-01 19:48:39.548665 (MainThread): Parsing macros/adapters/common.sql
+2021-12-01 19:48:39.658357 (MainThread): Acquiring new athena connection "model.my_new_project.Day_Filter".
+2021-12-01 19:48:39.668141 (MainThread): Acquiring new athena connection "model.my_new_project.NE_and_SmallTowns".
+2021-12-01 19:48:39.671006 (MainThread): Acquiring new athena connection "model.my_new_project.New_England".
+2021-12-01 19:48:39.674244 (MainThread): Acquiring new athena connection "model.my_new_project.Small_Towns".
+2021-12-01 19:48:39.697771 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.699934 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.703029 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.704618 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.711071 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.713059 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.718215 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.720019 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.723749 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.725634 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.727769 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.733389 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.734332 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.737418 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.740491 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 19:48:39.741350 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_New_England_state__state1__ref_region_table_.0525103524' (models/schema.yml) depends on a node named 'region_table' which was not found
+2021-12-01 19:48:39.743428 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_Small_Towns_city__city1__ref_random_small_towns_.cb2440f8d3' (models/schema.yml) depends on a node named 'random_small_towns' which was not found
+2021-12-01 19:48:39.760699 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'baa4d71b-3e10-4ce7-bf56-eefef5fd9ee8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1a64cd0>]}
+2021-12-01 19:48:39.774590 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-01 19:48:39.776129 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'baa4d71b-3e10-4ce7-bf56-eefef5fd9ee8', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1a64400>]}
+2021-12-01 19:48:39.777482 (MainThread): Found 4 models, 12 tests, 0 snapshots, 0 analyses, 162 macros, 0 operations, 2 seed files, 0 sources, 0 exposures
+2021-12-01 19:48:39.780322 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa39968b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa39962e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffa1a68b20>]}
+2021-12-01 19:48:39.781042 (MainThread): Flushing usage events
+2021-12-01 19:48:40.057924 (MainThread): Connection 'model.my_new_project.Small_Towns' was properly closed.
