@@ -23809,3 +23809,396 @@ dbt.exceptions.RuntimeException: Runtime Error in model NE_and_SmallTowns (model
 Done. PASS=2 WARN=0 ERROR=1 SKIP=0 TOTAL=3
 2021-11-30 20:03:53.045365 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff854427c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff84926520>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8548a820>]}
 2021-11-30 20:03:53.048829 (MainThread): Flushing usage events
+2021-12-01 09:18:59.166491 (MainThread): Running with dbt=0.21.0
+2021-12-01 09:18:59.246278 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.generate.GenerateTask'>, compile=True, debug=False, defer=None, exclude=None, log_cache_events=False, log_format='default', partial_parse=None, profile=None, profiles_dir='/home/vscode/.dbt', project_dir=None, record_timing_info=None, rpc_method='docs.generate', select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, threads=None, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', version_check=True, warn_error=False, which='generate', write_json=True)
+2021-12-01 09:18:59.253571 (MainThread): Tracking: tracking
+2021-12-01 09:18:59.256872 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81df2880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8368cca0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8368cdc0>]}
+2021-12-01 09:18:59.266116 (MainThread): Partial parsing not enabled
+2021-12-01 09:18:59.281709 (MainThread): Parsing macros/catalog.sql
+2021-12-01 09:18:59.284502 (MainThread): Parsing macros/adapters.sql
+2021-12-01 09:18:59.293846 (MainThread): Parsing macros/materializations/seed.sql
+2021-12-01 09:18:59.297726 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-12-01 09:18:59.299103 (MainThread): Parsing macros/materializations/table.sql
+2021-12-01 09:18:59.302257 (MainThread): Parsing macros/materializations/incremental.sql
+2021-12-01 09:18:59.315016 (MainThread): Parsing macros/materializations/view.sql
+2021-12-01 09:18:59.319095 (MainThread): Parsing macros/core.sql
+2021-12-01 09:18:59.322372 (MainThread): Parsing macros/materializations/test.sql
+2021-12-01 09:18:59.326863 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-01 09:18:59.332667 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-01 09:18:59.336171 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-01 09:18:59.340565 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-01 09:18:59.342192 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-01 09:18:59.348205 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-01 09:18:59.359988 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-01 09:18:59.373271 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-01 09:18:59.377869 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-01 09:18:59.385774 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-01 09:18:59.402260 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-01 09:18:59.412311 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-01 09:18:59.414146 (MainThread): Parsing macros/etc/query.sql
+2021-12-01 09:18:59.415281 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-01 09:18:59.421090 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-01 09:18:59.422731 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-01 09:18:59.425091 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-01 09:18:59.427813 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-01 09:18:59.433610 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-01 09:18:59.435178 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-01 09:18:59.437371 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-01 09:18:59.439211 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-01 09:18:59.441121 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-01 09:18:59.442774 (MainThread): Parsing macros/adapters/common.sql
+2021-12-01 09:18:59.549300 (MainThread): Acquiring new athena connection "model.my_new_project.NE_and_SmallTowns".
+2021-12-01 09:18:59.558473 (MainThread): Acquiring new athena connection "model.my_new_project.New_England".
+2021-12-01 09:18:59.562812 (MainThread): Acquiring new athena connection "model.my_new_project.Small_Towns".
+2021-12-01 09:18:59.586275 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.588277 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.591425 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.593015 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.600092 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.602635 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.608470 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.610506 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.612112 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.614300 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.616133 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.620837 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.621694 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.624516 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.629476 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-01 09:18:59.631004 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_New_England_state__state1__ref_region_table_.0525103524' (models/schema.yml) depends on a node named 'region_table' which was not found
+2021-12-01 09:18:59.632012 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_Small_Towns_city__city1__ref_random_small_towns_.cb2440f8d3' (models/schema.yml) depends on a node named 'random_small_towns' which was not found
+2021-12-01 09:18:59.654223 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '43d32d3b-cc68-4972-b8f6-be942f147c41', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff818c2370>]}
+2021-12-01 09:18:59.671308 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-01 09:18:59.673488 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '43d32d3b-cc68-4972-b8f6-be942f147c41', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff818d4880>]}
+2021-12-01 09:18:59.674781 (MainThread): Found 3 models, 12 tests, 0 snapshots, 0 analyses, 162 macros, 0 operations, 2 seed files, 0 sources, 0 exposures
+2021-12-01 09:18:59.677874 (MainThread): 
+2021-12-01 09:18:59.678829 (MainThread): Acquiring new athena connection "master".
+2021-12-01 09:18:59.681086 (ThreadPoolExecutor-0_0): Acquiring new athena connection "list_awsdatacatalog_dbt".
+2021-12-01 09:18:59.687789 (ThreadPoolExecutor-0_0): Using athena connection "list_awsdatacatalog_dbt".
+2021-12-01 09:18:59.688697 (ThreadPoolExecutor-0_0): On list_awsdatacatalog_dbt: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+  
+2021-12-01 09:18:59.690481 (ThreadPoolExecutor-0_0): Opening a new connection, currently in state init
+2021-12-01 09:18:59.723780 (ThreadPoolExecutor-0_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "list_awsdatacatalog_dbt"} */
+WITH views AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+      from "awsdatacatalog".INFORMATION_SCHEMA.views
+      where LOWER(table_schema) = LOWER('dbt')
+    ), tables AS (
+      select
+        table_catalog as database,
+        table_name as name,
+        table_schema as schema
+
+      from "awsdatacatalog".INFORMATION_SCHEMA.tables
+      where LOWER(table_schema) = LOWER('dbt')
+
+      -- Views appear in both `tables` and `views`, so excluding them from tables
+      EXCEPT 
+
+      select * from views
+    )
+    select views.*, 'view' AS table_type FROM views
+    UNION ALL
+    select tables.*, 'table' AS table_type FROM tables
+2021-12-01 09:19:03.839777 (ThreadPoolExecutor-0_0): SQL status: OK -1 in 4.15 seconds
+2021-12-01 09:19:03.849379 (ThreadPoolExecutor-0_0): On list_awsdatacatalog_dbt: Close
+2021-12-01 09:19:03.856445 (MainThread): 09:19:03 | Concurrency: 1 threads (target='dev')
+2021-12-01 09:19:03.858320 (MainThread): 09:19:03 | 
+2021-12-01 09:19:03.867796 (Thread-1): Began running node seed.my_new_project.Random_Small_Towns
+2021-12-01 09:19:03.869783 (Thread-1): Acquiring new athena connection "seed.my_new_project.Random_Small_Towns".
+2021-12-01 09:19:03.874165 (Thread-1): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 58268), raddr=('52.5.210.250', 443)>
+2021-12-01 09:19:03.878190 (Thread-1): Compiling seed.my_new_project.Random_Small_Towns
+2021-12-01 09:19:03.883967 (Thread-1): Writing injected SQL for node "seed.my_new_project.Random_Small_Towns"
+2021-12-01 09:19:03.886574 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.888452 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.889860 (Thread-1): Finished running node seed.my_new_project.Random_Small_Towns
+2021-12-01 09:19:03.891923 (Thread-1): Began running node seed.my_new_project.Region_Table
+2021-12-01 09:19:03.894229 (Thread-1): Acquiring new athena connection "seed.my_new_project.Region_Table".
+2021-12-01 09:19:03.896770 (Thread-1): Compiling seed.my_new_project.Region_Table
+2021-12-01 09:19:03.905683 (Thread-1): Writing injected SQL for node "seed.my_new_project.Region_Table"
+2021-12-01 09:19:03.906726 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.909102 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.911351 (Thread-1): Finished running node seed.my_new_project.Region_Table
+2021-12-01 09:19:03.913766 (Thread-1): Began running node model.my_new_project.Small_Towns
+2021-12-01 09:19:03.915637 (Thread-1): Acquiring new athena connection "model.my_new_project.Small_Towns".
+2021-12-01 09:19:03.917212 (Thread-1): Compiling model.my_new_project.Small_Towns
+2021-12-01 09:19:03.920119 (Thread-1): Writing injected SQL for node "model.my_new_project.Small_Towns"
+2021-12-01 09:19:03.924598 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.926814 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.928642 (Thread-1): Finished running node model.my_new_project.Small_Towns
+2021-12-01 09:19:03.929962 (Thread-1): Began running node model.my_new_project.New_England
+2021-12-01 09:19:03.931763 (Thread-1): Acquiring new athena connection "model.my_new_project.New_England".
+2021-12-01 09:19:03.933034 (Thread-1): Compiling model.my_new_project.New_England
+2021-12-01 09:19:03.936002 (Thread-1): Writing injected SQL for node "model.my_new_project.New_England"
+2021-12-01 09:19:03.939714 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.940925 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.942522 (Thread-1): Finished running node model.my_new_project.New_England
+2021-12-01 09:19:03.943994 (Thread-1): Began running node test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f
+2021-12-01 09:19:03.945582 (Thread-1): Acquiring new athena connection "test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f".
+2021-12-01 09:19:03.947236 (Thread-1): Compiling test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f
+2021-12-01 09:19:03.954463 (Thread-1): Writing injected SQL for node "test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f"
+2021-12-01 09:19:03.959014 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.959881 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.961635 (Thread-1): Finished running node test.my_new_project.accepted_values_Small_Towns_city1__Portland__Lebanon__Millinocket__Center_Hill__Muce__Key_West__Menomonie__El_Paso__Lakeland__Bagdad.e12f10257f
+2021-12-01 09:19:03.964694 (Thread-1): Began running node test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd
+2021-12-01 09:19:03.966339 (Thread-1): Acquiring new athena connection "test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd".
+2021-12-01 09:19:03.967708 (Thread-1): Compiling test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd
+2021-12-01 09:19:03.972269 (Thread-1): Writing injected SQL for node "test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd"
+2021-12-01 09:19:03.976369 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.977102 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.978694 (Thread-1): Finished running node test.my_new_project.not_null_Small_Towns_bldg_fid.da6d5310cd
+2021-12-01 09:19:03.980339 (Thread-1): Began running node test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1
+2021-12-01 09:19:03.981902 (Thread-1): Acquiring new athena connection "test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1".
+2021-12-01 09:19:03.983230 (Thread-1): Compiling test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1
+2021-12-01 09:19:03.986107 (Thread-1): Writing injected SQL for node "test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1"
+2021-12-01 09:19:03.989973 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.991231 (Thread-1): finished collecting timing info
+2021-12-01 09:19:03.992932 (Thread-1): Finished running node test.my_new_project.not_null_Small_Towns_city.ddd09d3dd1
+2021-12-01 09:19:03.994148 (Thread-1): Began running node test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb
+2021-12-01 09:19:03.995542 (Thread-1): Acquiring new athena connection "test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb".
+2021-12-01 09:19:03.996691 (Thread-1): Compiling test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb
+2021-12-01 09:19:04.000474 (Thread-1): Writing injected SQL for node "test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb"
+2021-12-01 09:19:04.003848 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.004953 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.006585 (Thread-1): Finished running node test.my_new_project.not_null_Small_Towns_gid.3aa3e432fb
+2021-12-01 09:19:04.007898 (Thread-1): Began running node test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd
+2021-12-01 09:19:04.009583 (Thread-1): Acquiring new athena connection "test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd".
+2021-12-01 09:19:04.011098 (Thread-1): Compiling test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd
+2021-12-01 09:19:04.015766 (Thread-1): Writing injected SQL for node "test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd"
+2021-12-01 09:19:04.019609 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.020503 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.021880 (Thread-1): Finished running node test.my_new_project.unique_Small_Towns_bldg_fid.c353ea7bbd
+2021-12-01 09:19:04.023366 (Thread-1): Began running node test.my_new_project.unique_Small_Towns_gid.9f44b76807
+2021-12-01 09:19:04.024599 (Thread-1): Acquiring new athena connection "test.my_new_project.unique_Small_Towns_gid.9f44b76807".
+2021-12-01 09:19:04.025868 (Thread-1): Compiling test.my_new_project.unique_Small_Towns_gid.9f44b76807
+2021-12-01 09:19:04.028984 (Thread-1): Writing injected SQL for node "test.my_new_project.unique_Small_Towns_gid.9f44b76807"
+2021-12-01 09:19:04.032529 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.033775 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.035552 (Thread-1): Finished running node test.my_new_project.unique_Small_Towns_gid.9f44b76807
+2021-12-01 09:19:04.036852 (Thread-1): Began running node test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb
+2021-12-01 09:19:04.038231 (Thread-1): Acquiring new athena connection "test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb".
+2021-12-01 09:19:04.039623 (Thread-1): Compiling test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb
+2021-12-01 09:19:04.043725 (Thread-1): Writing injected SQL for node "test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb"
+2021-12-01 09:19:04.047306 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.048126 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.049771 (Thread-1): Finished running node test.my_new_project.accepted_values_New_England_state__ME__NH__CT__MA__RI.5acdfeafcb
+2021-12-01 09:19:04.051198 (Thread-1): Began running node test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa
+2021-12-01 09:19:04.052728 (Thread-1): Acquiring new athena connection "test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa".
+2021-12-01 09:19:04.054489 (Thread-1): Compiling test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa
+2021-12-01 09:19:04.058196 (Thread-1): Writing injected SQL for node "test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa"
+2021-12-01 09:19:04.062066 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.063196 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.064758 (Thread-1): Finished running node test.my_new_project.not_null_New_England_bldg_fid.cb8a8182fa
+2021-12-01 09:19:04.066890 (Thread-1): Began running node test.my_new_project.not_null_New_England_gid.8118bef777
+2021-12-01 09:19:04.068297 (Thread-1): Acquiring new athena connection "test.my_new_project.not_null_New_England_gid.8118bef777".
+2021-12-01 09:19:04.069613 (Thread-1): Compiling test.my_new_project.not_null_New_England_gid.8118bef777
+2021-12-01 09:19:04.072938 (Thread-1): Writing injected SQL for node "test.my_new_project.not_null_New_England_gid.8118bef777"
+2021-12-01 09:19:04.076137 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.076787 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.078299 (Thread-1): Finished running node test.my_new_project.not_null_New_England_gid.8118bef777
+2021-12-01 09:19:04.079603 (Thread-1): Began running node test.my_new_project.not_null_New_England_state.b285ec8c7f
+2021-12-01 09:19:04.080771 (Thread-1): Acquiring new athena connection "test.my_new_project.not_null_New_England_state.b285ec8c7f".
+2021-12-01 09:19:04.082212 (Thread-1): Compiling test.my_new_project.not_null_New_England_state.b285ec8c7f
+2021-12-01 09:19:04.085090 (Thread-1): Writing injected SQL for node "test.my_new_project.not_null_New_England_state.b285ec8c7f"
+2021-12-01 09:19:04.089069 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.090342 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.092278 (Thread-1): Finished running node test.my_new_project.not_null_New_England_state.b285ec8c7f
+2021-12-01 09:19:04.093828 (Thread-1): Began running node test.my_new_project.unique_New_England_bldg_fid.655f25e331
+2021-12-01 09:19:04.095371 (Thread-1): Acquiring new athena connection "test.my_new_project.unique_New_England_bldg_fid.655f25e331".
+2021-12-01 09:19:04.096858 (Thread-1): Compiling test.my_new_project.unique_New_England_bldg_fid.655f25e331
+2021-12-01 09:19:04.099920 (Thread-1): Writing injected SQL for node "test.my_new_project.unique_New_England_bldg_fid.655f25e331"
+2021-12-01 09:19:04.103838 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.104888 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.106264 (Thread-1): Finished running node test.my_new_project.unique_New_England_bldg_fid.655f25e331
+2021-12-01 09:19:04.107611 (Thread-1): Began running node test.my_new_project.unique_New_England_gid.2161d3d211
+2021-12-01 09:19:04.110313 (Thread-1): Acquiring new athena connection "test.my_new_project.unique_New_England_gid.2161d3d211".
+2021-12-01 09:19:04.111701 (Thread-1): Compiling test.my_new_project.unique_New_England_gid.2161d3d211
+2021-12-01 09:19:04.115422 (Thread-1): Writing injected SQL for node "test.my_new_project.unique_New_England_gid.2161d3d211"
+2021-12-01 09:19:04.120221 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.121539 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.123545 (Thread-1): Finished running node test.my_new_project.unique_New_England_gid.2161d3d211
+2021-12-01 09:19:04.125325 (Thread-1): Began running node model.my_new_project.NE_and_SmallTowns
+2021-12-01 09:19:04.126926 (Thread-1): Acquiring new athena connection "model.my_new_project.NE_and_SmallTowns".
+2021-12-01 09:19:04.128219 (Thread-1): Compiling model.my_new_project.NE_and_SmallTowns
+2021-12-01 09:19:04.131029 (Thread-1): Writing injected SQL for node "model.my_new_project.NE_and_SmallTowns"
+2021-12-01 09:19:04.134684 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.135832 (Thread-1): finished collecting timing info
+2021-12-01 09:19:04.137353 (Thread-1): Finished running node model.my_new_project.NE_and_SmallTowns
+2021-12-01 09:19:04.139942 (MainThread): Connection 'master' was properly closed.
+2021-12-01 09:19:04.140620 (MainThread): Connection 'model.my_new_project.NE_and_SmallTowns' was properly closed.
+2021-12-01 09:19:04.153848 (MainThread): 09:19:04 | Done.
+2021-12-01 09:19:04.206869 (MainThread): Acquiring new athena connection "generate_catalog".
+2021-12-01 09:19:04.208073 (MainThread): 09:19:04 | Building catalog
+2021-12-01 09:19:04.211321 (ThreadPoolExecutor-2_0): Acquiring new athena connection "awsdatacatalog.information_schema".
+2021-12-01 09:19:04.217222 (ThreadPoolExecutor-2_0): Using athena connection "awsdatacatalog.information_schema".
+2021-12-01 09:19:04.218331 (ThreadPoolExecutor-2_0): On awsdatacatalog.information_schema: /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "awsdatacatalog.information_schema"} */
+
+    select * from (
+            (
+                with tables as (
+
+                    select
+                        tables.table_catalog as table_database,
+                        tables.table_schema as table_schema,
+                        tables.table_name as table_name,
+
+                        case
+                            when views.table_name is not null
+                                then 'view'
+                            when table_type = 'BASE TABLE'
+                                then 'table'
+                            else table_type
+                        end as table_type,
+
+                        null as table_owner,
+                        null as table_comment
+
+                    from "awsdatacatalog".INFORMATION_SCHEMA.tables
+                    left join "awsdatacatalog".INFORMATION_SCHEMA.views
+                        on tables.table_catalog = views.table_catalog
+                        and tables.table_schema = views.table_schema
+                        and tables.table_name = views.table_name
+
+                ),
+
+                columns as (
+
+                    select
+                        table_catalog as table_database,
+                        table_schema as table_schema,
+                        table_name as table_name,
+                        column_name as column_name,
+                        ordinal_position as column_index,
+                        data_type as column_type,
+                        comment as column_comment
+
+                    from "awsdatacatalog".INFORMATION_SCHEMA.columns
+
+                ),
+
+                catalog as (
+
+                    select
+                        tables.table_database,
+                        tables.table_schema,
+                        tables.table_name,
+                        tables.table_type,
+                        tables.table_comment,
+                        columns.column_name,
+                        columns.column_index,
+                        columns.column_type,
+                        columns.column_comment,
+                        tables.table_owner
+
+                    from tables
+                    join columns
+                        on tables."table_database" = columns."table_database"
+                        and tables."table_schema" = columns."table_schema"
+                        and tables."table_name" = columns."table_name"
+
+                )select * from catalog where lower("table_schema") = lower('dbt') union all select * from catalog where lower("table_schema") = lower('dbt_dbt_test__audit'))
+        )
+  
+2021-12-01 09:19:04.221542 (ThreadPoolExecutor-2_0): Opening a new connection, currently in state init
+2021-12-01 09:19:04.247445 (ThreadPoolExecutor-2_0): /* {"app": "dbt", "dbt_version": "0.21.0", "profile_name": "athena", "target_name": "dev", "connection_name": "awsdatacatalog.information_schema"} */
+
+    select * from (
+            (
+                with tables as (
+
+                    select
+                        tables.table_catalog as table_database,
+                        tables.table_schema as table_schema,
+                        tables.table_name as table_name,
+
+                        case
+                            when views.table_name is not null
+                                then 'view'
+                            when table_type = 'BASE TABLE'
+                                then 'table'
+                            else table_type
+                        end as table_type,
+
+                        null as table_owner,
+                        null as table_comment
+
+                    from "awsdatacatalog".INFORMATION_SCHEMA.tables
+                    left join "awsdatacatalog".INFORMATION_SCHEMA.views
+                        on tables.table_catalog = views.table_catalog
+                        and tables.table_schema = views.table_schema
+                        and tables.table_name = views.table_name
+
+                ),
+
+                columns as (
+
+                    select
+                        table_catalog as table_database,
+                        table_schema as table_schema,
+                        table_name as table_name,
+                        column_name as column_name,
+                        ordinal_position as column_index,
+                        data_type as column_type,
+                        comment as column_comment
+
+                    from "awsdatacatalog".INFORMATION_SCHEMA.columns
+
+                ),
+
+                catalog as (
+
+                    select
+                        tables.table_database,
+                        tables.table_schema,
+                        tables.table_name,
+                        tables.table_type,
+                        tables.table_comment,
+                        columns.column_name,
+                        columns.column_index,
+                        columns.column_type,
+                        columns.column_comment,
+                        tables.table_owner
+
+                    from tables
+                    join columns
+                        on tables."table_database" = columns."table_database"
+                        and tables."table_schema" = columns."table_schema"
+                        and tables."table_name" = columns."table_name"
+
+                )select * from catalog where lower("table_schema") = lower('dbt') union all select * from catalog where lower("table_schema") = lower('dbt_dbt_test__audit'))
+        )
+2021-12-01 09:19:07.115621 (ThreadPoolExecutor-2_0): SQL status: OK -1 in 2.89 seconds
+2021-12-01 09:19:07.121462 (ThreadPoolExecutor-2_0): On awsdatacatalog.information_schema: Close
+2021-12-01 09:19:07.137784 (MainThread): 09:19:07 | Catalog written to /workspaces/LearningDBT/target/catalog.json
+2021-12-01 09:19:07.138922 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff81df2880>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff80475d60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff804750d0>]}
+2021-12-01 09:19:07.140753 (MainThread): Flushing usage events
+2021-12-01 09:19:07.476302 (MainThread): Connection 'generate_catalog' was properly closed.
+2021-12-01 09:19:07.478080 (MainThread): Connection 'awsdatacatalog.information_schema' was properly closed.
+2021-12-01 09:19:07.482733 (MainThread): unclosed <ssl.SSLSocket fd=5, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=6, laddr=('172.17.0.2', 58270), raddr=('52.5.210.250', 443)>

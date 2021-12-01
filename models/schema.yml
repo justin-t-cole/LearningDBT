@@ -2,8 +2,10 @@ version: 2
 
 models:
   - name: New_England
+    description: This model extracts New England data from the larger dataset.
     columns:
       - name: gid
+        description: This field is a unique identifier.
         tests:
           - unique
           - not_null
