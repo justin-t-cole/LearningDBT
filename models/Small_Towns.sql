@@ -1,4 +1,4 @@
-SELECT * FROM "defaultdb"."buildings" buildings
+SELECT * FROM "nrel"."metadata" buildings
 inner join {{ ref('Random_Small_Towns') }} region
-on buildings.state=region.state1
+on buildings."in.state_abbreviation"=region.state1
 limit 10;

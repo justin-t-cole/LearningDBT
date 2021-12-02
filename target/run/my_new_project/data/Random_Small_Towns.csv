@@ -2,7 +2,7 @@
     
     create external table dbt.Random_Small_Towns (Zip integer, City1 string, County string, State1 string, Region string)
     stored as parquet
-    location 's3://justin-dbt-testing/Targettables/3eb3cfba-cf6b-4136-bcec-fb0ddce53c96/'
+    location 's3://athena-nrel/Targettables/c32f8660-6e4b-45d3-b7d8-21e0acabb2d1/'
     tblproperties ('classification'='parquet')
   ;
     -- dbt seed --

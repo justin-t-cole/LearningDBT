@@ -10,7 +10,7 @@ limit 10;
 
 /* In plain english: select all from the "buildings" table where the state value is in the Region_Table state column.  */
 
-SELECT * FROM "defaultdb"."buildings" buildings
+SELECT * FROM "nrel"."metadata" buildings
 inner join dbt.Region_Table region
-on buildings.state=region.state1
+on buildings."in.state_abbreviation"=region.state1
 limit 10;
