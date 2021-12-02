@@ -1,0 +1,1 @@
+select * from dbt.Size_Filter where "in.building_type" = 'RetailStripmall'

@@ -1,5 +1,4 @@
-
-      create table
+create table
     dbt.Day_Filter
 
     with (
@@ -7,30 +6,8 @@
     )
   as
     /*
-
-
-select
-    *,
-    my_slow_function(my_column)
-
-from raw_app_data.events
-
-
-
-
-SELECT DATENAME(WEEKDAY, GETDATE())
-Yields 
-Wednesday
-
-SELECT DATEPART(WEEKDAY, GETDATE())
- Yields
-4
-
-
-
-
-
-
+Select * from dbt.New_England
+SELECT DATENAME(WEEKDAY, GETDATE("NO FIELD HERE")) = "Wednesday"
 */
 
   

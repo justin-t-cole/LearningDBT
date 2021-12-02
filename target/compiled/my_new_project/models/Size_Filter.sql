@@ -1,0 +1,1 @@
+Select * from dbt.New_England where "in.sqft" > 1000
