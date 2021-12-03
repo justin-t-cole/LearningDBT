@@ -37663,3 +37663,72 @@ alter table dbt.Day_Filter set tblproperties ('classification' = 'parquet')
 Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
 2021-12-03 14:30:12.802352 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e8b2d90>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e97c910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffff8e02bcd0>]}
 2021-12-03 14:30:12.803730 (MainThread): Flushing usage events
+2021-12-03 14:56:00.191834 (MainThread): Running with dbt=0.21.0
+2021-12-03 14:56:00.254856 (MainThread): running dbt with arguments Namespace(cls=<class 'dbt.task.list.ListTask'>, debug=False, defer=None, exclude=None, greedy=False, log_cache_events=False, log_format='default', models=None, output='selector', output_keys=None, partial_parse=None, profile=None, profiles_dir='/home/vscode/.dbt', project_dir=None, record_timing_info=None, resource_types=[], rpc_method=None, select=None, selector_name=None, single_threaded=False, state=None, strict=False, target=None, test_new_parser=False, use_cache=True, use_colors=None, use_experimental_parser=False, vars='{}', warn_error=False, which='list', write_json=True)
+2021-12-03 14:56:00.260716 (MainThread): Tracking: tracking
+2021-12-03 14:56:00.263322 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb8f06fd0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb75f03a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb8e9f490>]}
+2021-12-03 14:56:00.273670 (MainThread): Partial parsing not enabled
+2021-12-03 14:56:00.292960 (MainThread): Parsing macros/catalog.sql
+2021-12-03 14:56:00.295758 (MainThread): Parsing macros/adapters.sql
+2021-12-03 14:56:00.303947 (MainThread): Parsing macros/materializations/seed.sql
+2021-12-03 14:56:00.306988 (MainThread): Parsing macros/materializations/snapshot.sql
+2021-12-03 14:56:00.308119 (MainThread): Parsing macros/materializations/table.sql
+2021-12-03 14:56:00.311009 (MainThread): Parsing macros/materializations/incremental.sql
+2021-12-03 14:56:00.324715 (MainThread): Parsing macros/materializations/view.sql
+2021-12-03 14:56:00.327883 (MainThread): Parsing macros/core.sql
+2021-12-03 14:56:00.330593 (MainThread): Parsing macros/materializations/test.sql
+2021-12-03 14:56:00.334706 (MainThread): Parsing macros/materializations/helpers.sql
+2021-12-03 14:56:00.340344 (MainThread): Parsing macros/materializations/view/create_or_replace_view.sql
+2021-12-03 14:56:00.343742 (MainThread): Parsing macros/materializations/view/view.sql
+2021-12-03 14:56:00.347753 (MainThread): Parsing macros/materializations/incremental/helpers.sql
+2021-12-03 14:56:00.349130 (MainThread): Parsing macros/materializations/incremental/incremental.sql
+2021-12-03 14:56:00.356456 (MainThread): Parsing macros/materializations/incremental/on_schema_change.sql
+2021-12-03 14:56:00.367683 (MainThread): Parsing macros/materializations/seed/seed.sql
+2021-12-03 14:56:00.380403 (MainThread): Parsing macros/materializations/table/table.sql
+2021-12-03 14:56:00.385261 (MainThread): Parsing macros/materializations/common/merge.sql
+2021-12-03 14:56:00.393224 (MainThread): Parsing macros/materializations/snapshot/snapshot.sql
+2021-12-03 14:56:00.410244 (MainThread): Parsing macros/materializations/snapshot/strategies.sql
+2021-12-03 14:56:00.420471 (MainThread): Parsing macros/materializations/snapshot/snapshot_merge.sql
+2021-12-03 14:56:00.422242 (MainThread): Parsing macros/etc/query.sql
+2021-12-03 14:56:00.425447 (MainThread): Parsing macros/etc/get_custom_schema.sql
+2021-12-03 14:56:00.427757 (MainThread): Parsing macros/etc/where_subquery.sql
+2021-12-03 14:56:00.429357 (MainThread): Parsing macros/etc/is_incremental.sql
+2021-12-03 14:56:00.430889 (MainThread): Parsing macros/etc/get_custom_database.sql
+2021-12-03 14:56:00.432487 (MainThread): Parsing macros/etc/datetime.sql
+2021-12-03 14:56:00.438500 (MainThread): Parsing macros/etc/get_custom_alias.sql
+2021-12-03 14:56:00.439925 (MainThread): Parsing macros/schema_tests/accepted_values.sql
+2021-12-03 14:56:00.442789 (MainThread): Parsing macros/schema_tests/not_null.sql
+2021-12-03 14:56:00.444778 (MainThread): Parsing macros/schema_tests/unique.sql
+2021-12-03 14:56:00.446880 (MainThread): Parsing macros/schema_tests/relationships.sql
+2021-12-03 14:56:00.449201 (MainThread): Parsing macros/adapters/common.sql
+2021-12-03 14:56:00.555511 (MainThread): Acquiring new athena connection "model.my_new_project.Day_Filter".
+2021-12-03 14:56:00.562959 (MainThread): Acquiring new athena connection "model.my_new_project.NE_and_SmallTowns".
+2021-12-03 14:56:00.567474 (MainThread): Acquiring new athena connection "model.my_new_project.New_England".
+2021-12-03 14:56:00.571533 (MainThread): Acquiring new athena connection "model.my_new_project.RetailStripMalls".
+2021-12-03 14:56:00.574436 (MainThread): Acquiring new athena connection "model.my_new_project.Size_Filter".
+2021-12-03 14:56:00.576985 (MainThread): Acquiring new athena connection "model.my_new_project.Small_Towns".
+2021-12-03 14:56:00.579755 (MainThread): Acquiring new athena connection "model.my_new_project.StripMall_Day".
+2021-12-03 14:56:00.602643 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.604360 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.607133 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.608775 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.616825 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.618495 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.623588 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.625327 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.627764 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.629506 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.631320 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.635873 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.636778 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.639560 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.643129 (MainThread): 'soft_unicode' has been renamed to 'soft_str'. The old name will be removed in MarkupSafe 2.1.
+2021-12-03 14:56:00.644528 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_New_England_state__state1__ref_region_table_.0525103524' (models/schema.yml) depends on a node named 'region_table' which was not found
+2021-12-03 14:56:00.645948 (MainThread): [WARNING]: Test 'test.my_new_project.relationships_Small_Towns_city__city1__ref_random_small_towns_.cb2440f8d3' (models/schema.yml) depends on a node named 'random_small_towns' which was not found
+2021-12-03 14:56:00.662340 (MainThread): Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '9cb69c63-b2ac-4980-b7e0-c7ba668a7f83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb70dcc70>]}
+2021-12-03 14:56:00.676487 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
+2021-12-03 14:56:00.678263 (MainThread): Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '9cb69c63-b2ac-4980-b7e0-c7ba668a7f83', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb6f71ee0>]}
+2021-12-03 14:56:00.679185 (MainThread): Found 7 models, 12 tests, 0 snapshots, 0 analyses, 162 macros, 0 operations, 2 seed files, 0 sources, 0 exposures
+2021-12-03 14:56:00.681615 (MainThread): Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb75f03a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb707e7c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0xffffb6f71ee0>]}
+2021-12-03 14:56:00.682297 (MainThread): Flushing usage events
+2021-12-03 14:56:00.981351 (MainThread): Connection 'model.my_new_project.StripMall_Day' was properly closed.

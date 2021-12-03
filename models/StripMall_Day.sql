@@ -1,0 +1,1 @@
+/* This model wll join the results of the Day Filter and the Strip Mall filter based on building ID from two different source databases. */
