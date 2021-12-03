@@ -18,20 +18,6 @@ from raw_app_data.events
 
 {% endif %}
 
-
-SELECT DATENAME(WEEKDAY, GETDATE())
-Yields 
-Wednesday
-
-SELECT DATEPART(WEEKDAY, GETDATE())
- Yields
-4
-
-
-
-
-
-
 */
 
 
